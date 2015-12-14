@@ -13,14 +13,18 @@ body {
   margin-bottom: 40px;
 }
 
-.post .meta time {
-  text-transform: uppercase;
+div.meta {
+  color: #9eabb3;
   font-size: 0.9em;
 }
 
-.post .meta a {
+.meta time {
+  text-transform: uppercase;
+}
+
+.meta a {
   text-decoration: none;
-  color: #3e948b;
+  color: #9eabb3;
 }
 
 .post .meta a:hover {
@@ -73,10 +77,6 @@ body {
   vertical-align: -0.4em;
 }
 
-div.meta {
-  color: #9eabb3;
-}
-
 .post article footer {
   border-top: 1px solid #3e948b;
   height: 80px;
@@ -100,7 +100,6 @@ div.meta {
   color: #3e948b;
   font-weight: 700;
   margin: 0;
-  margin-left: 5px;
 }
 
 .index header h1 a {
@@ -134,4 +133,18 @@ span.u-helper {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+}
+
+.index article h2 {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.index article header {
+  margin-bottom: 10px;
+}
+
+.index article p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  line-height: 1.7em;
 }
