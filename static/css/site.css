@@ -162,10 +162,6 @@ span.u-helper {
   line-height: 1.7em;
 }
 
-.index article footer {
-  margin-top: 0;
-}
-
 footer.bottom nav li {
   display: inline;
 }
@@ -176,14 +172,19 @@ footer.bottom nav a {
 }
 
 footer.bottom nav a[rel="next"] {
-
+  float: right;
 }
 
 footer.bottom nav {
   margin-top: 50px;
+  margin-bottom: -40px;
 }
 footer nav a[rel="prev"] {
-  float: right;
+  float: left;
+}
+
+section.endnote {
+  margin-top: 50px;
 }
 
 section.endnote p {
