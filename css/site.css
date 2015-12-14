@@ -27,8 +27,8 @@ div.meta {
   color: #9eabb3;
 }
 
-.post .meta a:hover {
-  text-decoration: underline;
+.meta a:hover {
+  color: #3e948b;
 }
 
 .post h1 {
@@ -94,6 +94,15 @@ div.meta {
   margin: 0;
 }
 
+.index header h2 a {
+  text-decoration: none;
+  color: #000;
+}
+
+.index header h2 a:hover {
+  color: #3e948b;
+}
+
 .index header h1 a {
   text-decoration: none;
   color: #3e948b;
@@ -156,6 +165,7 @@ footer.bottom nav li {
 
 footer.bottom nav a {
   text-decoration: none;
+  color: #3e948b;
 }
 
 footer.bottom nav a[rel="next"] {
@@ -178,4 +188,9 @@ section.endnote i.fa {
 
 section.endnote a {
   text-decoration: none;
+  color: #000;
+}
+
+section.endnote a:hover {
+  color: #3e948b;
 }
