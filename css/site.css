@@ -166,10 +166,6 @@ span.u-helper {
   margin-top: 0;
 }
 
-footer.bottom {
-  margin-top: 50px;
-}
-
 footer.bottom nav li {
   display: inline;
 }
@@ -183,6 +179,9 @@ footer.bottom nav a[rel="next"] {
 
 }
 
+footer.bottom nav {
+  margin-top: 50px;
+}
 footer nav a[rel="prev"] {
   float: right;
 }
