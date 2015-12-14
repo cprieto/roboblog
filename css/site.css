@@ -1,5 +1,4 @@
 body {
-  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-top: #3e948b;
   border-top-style: solid;
   border-width: 5px;
@@ -21,7 +20,7 @@ body {
 
 .post .meta a {
   text-decoration: none;
-  color: #9eabb3;
+  color: #3e948b;
 }
 
 .post .meta a:hover {
@@ -39,6 +38,7 @@ body {
 
 .post h1 a {
   text-decoration: none;
+  color: #3e948b;
 }
 
 .post h2 {
@@ -50,7 +50,7 @@ body {
 
 .post p {
   font-size: 1.2em;
-  line-height: 1.75em;
+  line-height: 1.70em;
   font-family: 'Merriweather', serif;
 }
 
@@ -83,4 +83,55 @@ div.meta {
   padding: 0;
   margin-top: 50px;
   font-size: 0.75em;
+}
+
+.index header {
+  margin-top: 50px;
+}
+
+.index header img.avatar {
+  max-width: 140px;
+  max-height: 140px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.index header h1 {
+  color: #3e948b;
+  font-weight: 700;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.index header h1 a {
+  text-decoration: none;
+  color: #3e948b;
+}
+
+.index header p {
+  font-style: italic;
+  margin: 0;
+}
+
+.index header nav {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.index header nav.social li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.index header nav.social i {
+  font-size: 3.5em;
+  padding-right: 5px;
+  margin-top: 5px;
+  color: #9eabb3;
+}
+
+span.u-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
