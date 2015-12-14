@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body %}
+<header>
+    <div class="row">
+      <div class="two columns offset-by-one">
+        <span class="u-helper"></span>
+        <img alt="{{ AUTHOR}}" src="https://pbs.twimg.com/profile_images/662317158446141440/TO8NhJ8L_400x400.jpg" class="avatar" />
+      </div>
+      <div class="nine columns">
+        <h1>{{ SITENAME|striptags }}</h1>
+        <p>
+          Honey, where's my coding t-shirt?
+        </p>
+        <nav class="social">
+          <ul>
+            <li><a href="#" rel="external"><i class="fa fa-github"></i></a></li>
+            <li><a href="#" rel="external"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</header>
+<main role="main" class="index">
+  <div class="ten columns offset-by-one">
+{% for article in articles_page.object_list %}
+    <article>
+      <header>
+        <h2><a href="{{ article.url }}">{{ article.title|striptags }}</a></h2>
+      </header>
+      <section>
+        {{ article.summary }}
+      </section>
+      <footer>
+        <div class="meta">
+          <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B %Y')}}</time>
+          {% if article.tags %}
+           on {% for tag in article.tags %}<a href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+          {% endif %}
+        </div>
+      </footer>
+  </article>
+{% endfor %}
+  </div>
+</main>
+{% endblock %}
+{% block footer %}
+{% if articles_page.has_other_pages() %}
+<div class="row">
+  <div class="ten columns offset-by-one">
+    <nav>
+      <ul>
+          {% if articles_page.has_previous() %}
+          <li><a href="{{ SITEURL}}/{{articles_previous_page.url}}" rel="prev">Newer posts</a></li>
+          {% endif %}
+          {% if articles_page.has_next() %}
+          <li><a href="{{ SITEURL }}/{{articles_next_page.url}}" rel="next">Older posts</a></li>
+          {% endif %}
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endif %}
+{{ super() }}
+{% endblock %}
