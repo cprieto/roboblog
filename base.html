@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta name="description" content="">
+  <meta name="author" content="{{ SITEAUTHOR }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans|Merriweather:700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- This should be move to one min css -->
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/skeleton.css"/>
+  <link rel="stylesheet" href="css/site.css"/>
+  {% block head %}
+  {% endblock %}
+</head>
+<body class="index">
+  <div class="container">
+    {% block body %}
+    {% endblock %}
+    <footer class="bottom">
+        {% block footer %}
+        {% endblock %}
+        <div class="row">
+          <div class="ten columns offset-by-one">
+            <nav>
+              <ul>
+                  <li><a href="#" rel="next">Newer posts</a></li>
+                  <li><a href="#" rel="prev">Older posts</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div class="ten columns offset-by-one">
+            <section class="endnote">
+              <p>
+                Powered by <a href="#">Pelican</a> | <a href="#"><i class="fa fa-creative-commons"></a></i> <a href="#">{{ SITEAUTHOR }}</a> &copy; 2015
+              </p>
+            </section>
+          </div>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>
