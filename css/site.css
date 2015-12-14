@@ -91,10 +91,12 @@ div.meta {
 }
 
 .index header img.avatar {
+  height: auto;
+  width: 100%;
   max-width: 140px;
-  max-height: 140px;
   border-radius: 50%;
   vertical-align: middle;
+  display: block;
 }
 
 .index header h1 {
