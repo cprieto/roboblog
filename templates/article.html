@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="eight columns offset-by-two">
+  <header class="post">
+    <h1><a href="{{SITEURL}}/index.html">{{SITENAME}}</a></h1>
+  </header>
+</div>
+<main role="main" class="post">
+  <div class="twelve columns">
+    <article>
+      <header>
+        <h2>{{ article.title|striptags }}</h2>
+        <div class="meta">
+          <span class="u-helper"></span>
+          <img class="avatar" alt="{{AUTHOR}}" src="https://pbs.twimg.com/profile_images/662317158446141440/TO8NhJ8L_400x400.jpg" />
+          <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B %Y')}}</time>
+          {% if article.tags %}
+           on {% for tag in article.tags %}<a href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+          {% endif %}
+        </div>
+      </header>
+      <section>
+        {{ article.content }}
+      </section>
+    </article>
+  </div>
+</main>
+{% endblock %}

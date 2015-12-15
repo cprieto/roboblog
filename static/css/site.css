@@ -4,11 +4,22 @@ body {
   border-top-style: solid;
   border-width: 5px;
   background-color: #fff;
+  font-family: 'Merriweather', serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.70em;
 }
 
 div.meta {
   color: #9eabb3;
   font-size: 0.9em;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 .meta time {
@@ -57,6 +68,7 @@ header.index h1 a {
 
 header.index p {
   font-style: italic;
+  font-size: 0.9em;
   margin: 0;
 }
 
@@ -95,21 +107,10 @@ main.index header h2 a:hover {
   color: #3e948b;
 }
 
-main.index article h2 {
-  font-family: 'Droid Sans', sans-serif;
-}
-
 main.index article header {
   margin-bottom: 10px;
   margin-top: 50px;
 }
-
-main.index article p {
-  font-family: 'Merriweather', serif;
-  font-size: 1.2em;
-  line-height: 1.7em;
-}
-
 
 /* Post styles */
 header.post {
@@ -134,12 +135,6 @@ header.post h1 {
   color: #3e948b;
 }
 
-main.post h2,
-main.post h3,
-main.post h4 {
-  font-family: 'Droid Sans', sans-serif;
-}
-
 main.post h2 {
   font-weight: 400;
   margin-bottom: 5px;
@@ -148,12 +143,6 @@ main.post h2 {
 main.post article header {
   margin-bottom: 40px;
   margin-top: 30px;
-}
-
-main.post article section p {
-  font-size: 1.2em;
-  line-height: 1.70em;
-  font-family: 'Merriweather', serif;
 }
 
 main.post article section blockquote {
@@ -203,7 +192,6 @@ section.endnote {
 section.endnote p {
   text-align: center;
   font-size: 0.9em;
-  font-family: 'Merriweather', serif;
 }
 
 section.endnote i.fa {
