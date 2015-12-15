@@ -1,4 +1,5 @@
 newblog/
 content/
 output/
+pelican-plugins/
 *.pyc
