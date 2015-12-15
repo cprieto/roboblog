@@ -37,3 +37,6 @@ DEFAULT_PAGINATION = 5
 
 THEME = os.path.join(os.path.dirname(os.path.realpath(__file__)), "newblog")
 TYPOGRIFY = True
+
+PLUGIN_PATHS = ["pelican-plugins"]
+PLUGINS = ["neighbors"]
