@@ -5,12 +5,21 @@ body {
   background-color: #fff;
 }
 
-.post header {
+header.post {
   text-align: center;
   margin-top: 50px;
   text-align: left;
   margin-top: 30px;
   margin-bottom: 40px;
+}
+
+header.post h1 {
+  color: #3e948b;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 300;
+  word-spacing: 0.75em;
+  text-align: center;
 }
 
 div.meta {
@@ -38,15 +47,6 @@ div.meta {
 
 .meta a:hover {
   color: #3e948b;
-}
-
-.post h1 {
-  color: #3e948b;
-  text-transform: uppercase;
-  font-size: 1.3em;
-  font-weight: 400;
-  word-spacing: 0.75em;
-  text-align: center;
 }
 
 .post h1 a {
@@ -86,11 +86,44 @@ div.meta {
   vertical-align: -0.4em;
 }
 
-.index header {
+header.index {
   margin-top: 50px;
 }
 
-.index header img.avatar {
+header.index h1 {
+  color: #3e948b;
+  font-weight: 700;
+  margin: 0;
+}
+
+header.index h1 a {
+  text-decoration: none;
+  color: #3e948b;
+}
+
+header.index p {
+  font-style: italic;
+  margin: 0;
+}
+
+header.index nav.social {
+  margin: 0;
+  margin-top: 10px;
+}
+
+header.index nav.social li {
+  display: inline;
+  margin-right: 10px;
+}
+
+header.index nav.social i {
+  font-size: 3.5em;
+  padding-right: 5px;
+  margin-top: 5px;
+  color: #9eabb3;
+}
+
+header.index img.avatar {
   height: auto;
   width: 100%;
   max-width: 140px;
@@ -99,46 +132,13 @@ div.meta {
   display: block;
 }
 
-.index header h1 {
-  color: #3e948b;
-  font-weight: 700;
-  margin: 0;
-}
-
-.index header h2 a {
+main.index header h2 a {
   text-decoration: none;
   color: #000;
 }
 
-.index header h2 a:hover {
+main.index header h2 a:hover {
   color: #3e948b;
-}
-
-.index header h1 a {
-  text-decoration: none;
-  color: #3e948b;
-}
-
-.index header p {
-  font-style: italic;
-  margin: 0;
-}
-
-.index header nav {
-  margin: 0;
-  margin-top: 10px;
-}
-
-.index header nav.social li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.index header nav.social i {
-  font-size: 3.5em;
-  padding-right: 5px;
-  margin-top: 5px;
-  color: #9eabb3;
 }
 
 span.u-helper {
@@ -147,16 +147,16 @@ span.u-helper {
   vertical-align: middle;
 }
 
-.index article h2 {
+main.index article h2 {
   font-family: 'Droid Sans', sans-serif;
 }
 
-.index article header {
+main.index article header {
   margin-bottom: 10px;
   margin-top: 50px;
 }
 
-.index article p {
+main.index article p {
   font-family: 'Merriweather', serif;
   font-size: 1.2em;
   line-height: 1.7em;
