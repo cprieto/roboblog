@@ -1,25 +1,9 @@
+/* Common styles */
 body {
   border-top: #3e948b;
   border-top-style: solid;
   border-width: 5px;
   background-color: #fff;
-}
-
-header.post {
-  text-align: center;
-  margin-top: 50px;
-  text-align: left;
-  margin-top: 30px;
-  margin-bottom: 40px;
-}
-
-header.post h1 {
-  color: #3e948b;
-  text-transform: uppercase;
-  font-size: 1.3em;
-  font-weight: 300;
-  word-spacing: 0.75em;
-  text-align: center;
 }
 
 div.meta {
@@ -49,43 +33,13 @@ div.meta {
   color: #3e948b;
 }
 
-.post h1 a {
-  text-decoration: none;
-  color: #3e948b;
+span.u-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
-.post h2 {
-  font-family: 'Droid Sans', sans-serif;
-  font-size: 4.5em;
-  font-weight: 400;
-  margin-bottom: 5px;
-}
-
-.post p {
-  font-size: 1.2em;
-  line-height: 1.70em;
-  font-family: 'Merriweather', serif;
-}
-
-.post blockquote {
-  font-size: 1.3em;
-  font-style: italic;
-  font-weight: lighter;
-  margin: 1.5em 25px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  font-family: 'Droid Sans', serif;
-}
-
-.post blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-
+/* index styles */
 header.index {
   margin-top: 50px;
 }
@@ -141,12 +95,6 @@ main.index header h2 a:hover {
   color: #3e948b;
 }
 
-span.u-helper {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-
 main.index article h2 {
   font-family: 'Droid Sans', sans-serif;
 }
@@ -160,6 +108,71 @@ main.index article p {
   font-family: 'Merriweather', serif;
   font-size: 1.2em;
   line-height: 1.7em;
+}
+
+
+/* Post styles */
+header.post {
+  text-align: center;
+  margin-top: 50px;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+header.post h1 {
+  color: #3e948b;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 400;
+  word-spacing: 0.75em;
+  text-align: center;
+}
+
+.post h1 a {
+  text-decoration: none;
+  color: #3e948b;
+}
+
+main.post h2,
+main.post h3,
+main.post h4 {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+main.post h2 {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+main.post article header {
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+main.post article section p {
+  font-size: 1.2em;
+  line-height: 1.70em;
+  font-family: 'Merriweather', serif;
+}
+
+main.post article section blockquote {
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: lighter;
+  margin: 1.5em 25px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-family: 'Droid Sans', serif;
+}
+
+main.post article section blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
 }
 
 footer.bottom nav li {
