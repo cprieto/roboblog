@@ -26,3 +26,22 @@
   </div>
 </main>
 {% endblock %}
+{% block footer %}
+{% if article.prev_article %}
+<div class="row">
+  <div class="twelve columns">
+    <nav>
+      <ul>
+          {% if article.next_article %}
+          <li><a href="{{SITEURL}}/{{article.next_article.url}}" rel="prev">Previous post</a></li>
+          {% endif %}
+          {% if article.prev_article %}
+          <li><a href="{{SITEURL}}/{{article.prev_article.url}}" rel="next">Next post</a></li>
+          {% endif %}
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endif %}
+{{ super() }}
+{% endblock %}
