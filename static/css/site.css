@@ -208,3 +208,31 @@ section.endnote a {
 section.endnote a:hover {
   color: #3e948b;
 }
+
+/* archive styles */
+main.archives header {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+main.archives section h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+main.archives section h4 {
+    margin-bottom: 5px;
+}
+
+main.archives section article {
+  margin-bottom: 30px;
+}
+
+main.archives section article a {
+  text-decoration: none;
+}
+
+main.archives section article a:hover {
+  color: #3e948b;
+}
