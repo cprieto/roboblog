@@ -40,3 +40,6 @@ sys.path.append('.')
 import custom_filters
 
 JINJA_FILTERS = {'all_but':custom_filters.all_but}
+
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{slug}.html'
