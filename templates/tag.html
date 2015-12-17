@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ super() }} - Tags under {{tag.name|striptags}} {% endblock %}
+{% block body %}
+<div class="eight columns offset-by-two">
+  <header class="post">
+    <h1><a href="{{SITEURL}}/index.html">{{SITENAME}}</a></h1>
+  </header>
+</div>
+<main role="main" class="archive">
+  <div class="ten columns offset-by-one">
+    <header>
+      <h2>Articles tagged with {{ tag.name|striptags }}</h2>
+    </header>
+    <section>
+      {% for year, list in articles|sort(attribute='date')|groupby('date.year') %}
+        <h3>{{ year }}</h3>
+        {% for article in list|sort(attribute='date', reverse=True) %}
+          <div class="meta">{{article.date|strftime('%d %B')}}</div>
+          <h4><a href="#">{{article.title}}</a></h4>
+        {% endfor %}
+      {% endfor %}
+    </section>
+  </div>
+</main>
+{% endblock %}
