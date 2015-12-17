@@ -19,7 +19,12 @@
   <!-- This should be move to one min css -->
   <link rel="stylesheet" href="{{SITEURL}}/theme/css/normalize.css"/>
   <link rel="stylesheet" href="{{SITEURL}}/theme/css/skeleton.css"/>
-  <link rel="stylesheet" href="{{SITEURL}}/theme/css/pastie.css" />
+  {% if PYGMENTS_THEME %}
+  <link rel="stylesheet" href="{{SITEURL}}/theme/css/{{ PYGMENTS_THEME|lower }}.css" />
+  {% else %}
+  <link rel="stylesheet" href="{{SITEURL}}/theme/css/pygment.css" />
+  {% endif %}
+
   <link rel="stylesheet" href="{{SITEURL}}/theme/css/site.css"/>
   {% block head %}
   {% endblock %}
