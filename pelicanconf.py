@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import os
+import os, sys
 
 AUTHOR = u'Cristian Prieto'
 SITENAME = u'IDisposable Thoughts'
@@ -9,7 +9,7 @@ SITEURL = ''
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Australia/Melbourne'
 
 DEFAULT_LANG = u'en'
 
@@ -19,16 +19,6 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 5
 
@@ -40,3 +30,13 @@ TYPOGRIFY = True
 
 PLUGIN_PATHS = ["pelican-plugins"]
 PLUGINS = ["neighbors"]
+
+STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.png', 'figure']
+PYGMENTS_THEME = 'colorful'
+
+MD_EXTENSIONS = ['codehilite(css_class=highlight,linenums=False)', 'extra', 'downheader']
+
+sys.path.append('.')
+import custom_filters
+
+JINJA_FILTERS = {'all_but':custom_filters.all_but}
