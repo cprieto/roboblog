@@ -1,3 +1,5 @@
+Sitemap: http://cprieto.com/sitemap.xml
+
 User-agent: googlebot
 User-agent: google
 User-agent: bingbot
