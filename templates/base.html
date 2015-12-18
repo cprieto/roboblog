@@ -9,6 +9,8 @@
   <meta property="og:locale" content="{{ DEFAULT_LANG }}">
   {% if article %}
   <meta property="og:title" content="{{article.title|striptags}}">
+  {% elif page }
+  <meta property="og:title" content="{{page.title|striptags}}">
   {% else %}
   <meta property="og:title" content="{{SITENAME|striptags}}">
   {% endif %}
@@ -24,7 +26,6 @@
   {% else %}
   <link rel="stylesheet" href="{{SITEURL}}/theme/css/pygment.css" />
   {% endif %}
-
   <link rel="stylesheet" href="{{SITEURL}}/theme/css/site.css"/>
   {% block head %}
   {% endblock %}
