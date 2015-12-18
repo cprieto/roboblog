@@ -11,6 +11,7 @@ body {
     background-color: #f0f0f0;
     border-radius: 5px;
     padding: 10px;
+    border: 1px solid #e1e1e1;
 }
 
 h1, h2, h3, h4, h5 {
