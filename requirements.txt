@@ -10,6 +10,7 @@ MarkupSafe==0.23
 paramiko==1.16.0
 pelican==3.6.3
 pelican-extended-sitemap==1.0.2
+pelican-neighbors==1.0.0
 pycrypto==2.6.1
 Pygments==2.0.2
 python-dateutil==2.4.2
