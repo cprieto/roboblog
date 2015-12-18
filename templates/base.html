@@ -6,11 +6,12 @@
   <meta name="description" content="{{SITESUBTITLE}}">
   <meta name="author" content="{{ AUTHOR }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Pelican" />
   <meta property="og:locale" content="{{ DEFAULT_LANG }}">
   {% if article %}
   <meta property="og:title" content="{{article.title|striptags}}">
   <meta property="og:type" content="article">
-  {% elif page }
+  {% elif page %}
   <meta property="og:title" content="{{page.title|striptags}}">
   {% else %}
   <meta property="og:title" content="{{SITENAME|striptags}}">
@@ -29,6 +30,7 @@
   <link rel="stylesheet" href="{{SITEURL}}/theme/css/pygment.css" />
   {% endif %}
   <link rel="stylesheet" href="{{SITEURL}}/theme/css/site.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="{{SITEURL}}/favicon.ico">
   {% block head %}
   {% endblock %}
 </head>
@@ -43,7 +45,7 @@
           <div class="ten columns offset-by-one">
             <section class="endnote">
               <p>
-              Powered by <a href="http://blog.getpelican.com/">Pelican</a> | <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><i class="fa fa-creative-commons"></a></i> <a rel="author" href="{{ SITEURL }}/pages/about.html">{{ AUTHOR }}</a> &copy; 2015
+              Powered by <a rel="external" href="http://blog.getpelican.com/">Pelican</a> | <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><i class="fa fa-creative-commons"></a></i> <a rel="author" href="{{ SITEURL }}/pages/about.html">{{ AUTHOR }}</a> &copy; 2015
               </p>
             </section>
           </div>

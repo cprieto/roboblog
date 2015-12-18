@@ -27,7 +27,7 @@
 {% for article in articles_page.object_list %}
     <article>
       <header>
-        <h2><a href="{{ article.url }}">{{ article.title|striptags }}</a></h2>
+        <h2><a rel="bookmark" href="{{ article.url }}">{{ article.title|striptags }}</a></h2>
       </header>
       <section>
         {{ article.summary }}
@@ -36,7 +36,7 @@
         <div class="meta">
           <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B %Y')}}</time>
           {% if article.tags %}
-           on {% for tag in article.tags %}<a href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+           on {% for tag in article.tags %}<a rel="tag" href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
           {% endif %}
         </div>
       </footer>
