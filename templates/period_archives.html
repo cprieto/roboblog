@@ -9,7 +9,7 @@
 <main role="main" class="archives">
   <div class="ten columns offset-by-one">
     <header>
-      <h2>Articles archived on {{ period | reverse | join(' ') }}</h2>
+      <h2>Articles written during {{ period | reverse | join(' ') }}</h2>
     </header>
     <section>
       {% for article in dates %}
