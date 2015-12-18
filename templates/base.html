@@ -3,7 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  {% if period %}
+  <meta name="description" content="{{SITESUBTITLE}} archives for {{period|reverse|join(' ')}}">
+  {% elif tag %}
+  <meta name="description" content="{{SITESUBTITLE}} articles archived under tag {{tag|striptags}}">
+  {% elif article %}
+  <meta name="description" content="{{SITESUBTITLE}} article about {{article.title|striptags}}">
+  {% elif page %}
+  <meta name="description" content="{{page.title|striptags}}">
+  {% else %}
   <meta name="description" content="{{SITESUBTITLE}}">
+  {% endif %}
   <meta name="author" content="{{ AUTHOR }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Pelican" />
@@ -13,6 +23,8 @@
   <meta property="og:type" content="article">
   {% elif page %}
   <meta property="og:title" content="{{page.title|striptags}}">
+  {% elif period %}
+  <meta property="og:title" content="Blog archives for {{period|reverse|join(' ')}}">
   {% else %}
   <meta property="og:title" content="{{SITENAME|striptags}}">
   <meta property="og:type" content="website">
