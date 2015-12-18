@@ -12,7 +12,7 @@
         <h2>{{ article.title|striptags }}</h2>
         <div class="meta">
           <span class="u-helper"></span>
-          <a rel="author" href="{{ SITEURL }}/pages/about.html">
+          <a rel="author" href="{{ SITEURL }}/about.html">
           <img class="avatar" alt="{{AUTHOR}}" src="{{ SITEURL}}/theme/images/avatar01_small.jpeg" />
           </a>
           <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B %Y')}}</time>
