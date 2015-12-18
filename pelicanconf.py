@@ -53,3 +53,16 @@ MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 
 ARCHIVES_SAVE_AS = 'posts/index.html'
 TAGS_SAVE_AS = 'tag/index.html'
+
+OUTPUT_PATH = 'output/'
+DIRECT_TEMPLATES = ['index', 'archives', 'tags']
+
+AUTHOR_URL = ''
+AUTHOR_SAVE_AS = ''
+
+USE_FOLDER_AS_CATEGORY = False
+CATEGORY_URL = ''
+CATEGORY_SAVE_AS = ''
+
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
