@@ -13,8 +13,8 @@ from pelicanconf import *
 SITEURL = 'http://cprieto.com/'
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_ALL_ATOM = 'atom.xml'
+CATEGORY_FEED_ATOM = ''
 
 DELETE_OUTPUT_DIRECTORY = False
 
@@ -24,3 +24,6 @@ DISQUS_SITENAME = "idisposablethoughts"
 #GOOGLE_ANALYTICS = ""
 
 GITHUB_REPO = 'git@github.com:cprieto/cprieto.github.io.git'
+
+FEED_DOMAIN = SITEURL
+

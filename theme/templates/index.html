@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% block head %}
+{{super()}}
+{% if FEED_DOMAIN and FEED_ALL_ATOM %}
+<link href="{{FEED_DOMAIN}}/{{FEED_ALL_ATOM}}" type="application/atom+xml" rel="alternate" title="IDisposable Thoughts ATOM Feed" />
+{% endif %}
+{% endblock %}
 {% block body %}
 <header class="index">
     <div class="row">
