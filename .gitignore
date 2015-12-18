@@ -1,5 +1,6 @@
 newblog/
-content/
+content/cache/
+content/*.md
+content/figure/
 output/
-pelican-plugins/
 *.pyc
