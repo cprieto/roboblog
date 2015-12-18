@@ -1,0 +1,260 @@
+/* Common styles */
+body {
+  border-top: #3e948b;
+  border-top-style: solid;
+  border-width: 5px;
+  background-color: #fff;
+  font-family: 'Merriweather', serif;
+}
+
+.highlight pre {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.70em;
+}
+
+div.meta {
+  color: #9eabb3;
+  font-size: 0.9em;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.meta time {
+  text-transform: uppercase;
+}
+
+.meta img.avatar {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline;
+  vertical-align: middle;
+}
+
+.meta a {
+  text-decoration: none;
+  color: #9eabb3;
+}
+
+.meta a:hover {
+  color: #3e948b;
+}
+
+span.u-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* index styles */
+header.index {
+  margin-top: 50px;
+}
+
+header.index h1 {
+  color: #3e948b;
+  font-weight: 700;
+  margin: 0;
+}
+
+header.index h1 a {
+  text-decoration: none;
+  color: #3e948b;
+}
+
+header.index p {
+  font-style: italic;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+header.index nav.social {
+  margin: 0;
+  margin-top: 10px;
+}
+
+header.index nav.social li {
+  display: inline;
+  margin-right: 10px;
+}
+
+header.index nav.social i {
+  font-size: 3.5em;
+  padding-right: 5px;
+  margin-top: 5px;
+  color: #9eabb3;
+}
+
+header.index img.avatar {
+  height: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 140px;
+  max-height: 140px;
+  border-radius: 50%;
+  vertical-align: middle;
+  display: block;
+}
+
+main.index header h2 a {
+  text-decoration: none;
+  color: #000;
+}
+
+main.index header h2 a:hover {
+  color: #3e948b;
+}
+
+main.index article header {
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+/* Post styles */
+header.post {
+  text-align: center;
+  margin-top: 50px;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+header.post h1 {
+  color: #3e948b;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 400;
+  word-spacing: 0.75em;
+  text-align: center;
+}
+
+.post h1 a {
+  text-decoration: none;
+  color: #3e948b;
+}
+
+main.post h2 {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+main.post article header {
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+main.post article section blockquote {
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: lighter;
+  margin: 1.5em 25px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-family: 'Droid Sans', serif;
+}
+
+main.post article section blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+footer.bottom nav li {
+  display: inline;
+}
+
+footer.bottom nav a {
+  text-decoration: none;
+  color: #3e948b;
+}
+
+footer.bottom nav a[rel="next"] {
+  float: right;
+}
+
+footer.bottom nav {
+  margin-top: 50px;
+  margin-bottom: -40px;
+}
+footer nav a[rel="prev"] {
+  float: left;
+}
+
+section.endnote {
+  margin-top: 50px;
+}
+
+section.endnote p {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+section.endnote i.fa {
+  font-size: 1.1em;
+}
+
+section.endnote a {
+  text-decoration: none;
+  color: #000;
+}
+
+section.endnote a:hover {
+  color: #3e948b;
+}
+
+/* archive styles */
+main.archives header {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+main.archives section h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+main.archives section h4 {
+    margin-bottom: 5px;
+}
+
+main.archives section article {
+  margin-bottom: 30px;
+}
+
+main.archives section article a {
+  text-decoration: none;
+}
+
+main.archives section article a:hover {
+  color: #3e948b;
+}
+
+/* page styles */
+main.page header {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+/* about page */
+main.page img.avatar {
+    border-radius: 25px;
+    float: right;
+    padding-left: 15px;
+}
+
