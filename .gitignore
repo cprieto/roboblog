@@ -1,6 +1,4 @@
 newblog/
 content/cache/
-content/*.md
-content/figure/
 output/
 *.pyc
