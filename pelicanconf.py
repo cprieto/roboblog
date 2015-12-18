@@ -28,10 +28,8 @@ DEFAULT_PAGINATION = 5
 THEME = os.path.join(os.path.dirname(os.path.realpath(__file__)), "newblog")
 TYPOGRIFY = True
 
-PLUGIN_PATHS = ["pelican-plugins"]
 PLUGINS = ["neighbors"]
 
-STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.png', 'figure']
 PYGMENTS_THEME = 'colorful'
 
 MD_EXTENSIONS = ['codehilite(css_class=highlight,linenums=False)', 'extra', 'downheader']
@@ -43,3 +41,15 @@ JINJA_FILTERS = {'all_but':custom_filters.all_but}
 
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{slug}.html'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{slug}.html'
+
+STATIC_PATHS = ['images', 'extras/robots.txt', 'extras/favicon.ico']
+EXTRA_PATH_METADATA = {
+    'extras/robots.txt': {'path': 'robots.txt'},
+    'extras/favicon.ico': {'path': 'favicon.ico'}
+}
+
+YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
+
+ARCHIVES_SAVE_AS = 'posts/index.html'
+TAGS_SAVE_AS = 'tag/index.html'
