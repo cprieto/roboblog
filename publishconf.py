@@ -21,7 +21,7 @@ DELETE_OUTPUT_DIRECTORY = False
 # Following items are often useful when publishing
 
 DISQUS_SITENAME = "idisposablethoughts"
-#GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = "UA-57001655-1"
 
 GITHUB_REPO = 'git@github.com:cprieto/cprieto.github.io.git'
 
