@@ -30,7 +30,7 @@ TYPOGRIFY = True
 
 PLUGINS = ["neighbors"]
 
-PYGMENTS_THEME = 'colorful'
+PYGMENTS_THEME = 'tomorrow'
 
 MD_EXTENSIONS = ['codehilite(css_class=highlight,linenums=False)', 'extra', 'downheader']
 
