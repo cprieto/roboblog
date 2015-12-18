@@ -2,7 +2,7 @@
 {% block body %}
 <div class="eight columns offset-by-two">
   <header class="post">
-    <h1><a href="{{SITEURL}}/index.html">{{SITENAME}}</a></h1>
+    <h1><a rel="index" href="{{SITEURL}}/index.html">{{SITENAME}}</a></h1>
   </header>
 </div>
 <main role="main" class="post">
@@ -12,12 +12,12 @@
         <h2>{{ article.title|striptags }}</h2>
         <div class="meta">
           <span class="u-helper"></span>
-          <a href="{{ SITEURL }}/pages/about.html">
+          <a rel="author" href="{{ SITEURL }}/pages/about.html">
           <img class="avatar" alt="{{AUTHOR}}" src="{{ SITEURL}}/theme/images/avatar01_small.jpeg" />
           </a>
           <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B %Y')}}</time>
           {% if article.tags %}
-           on {% for tag in article.tags %}<a href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+           on {% for tag in article.tags %}<a rel="tag" href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
           {% endif %}
         </div>
       </header>

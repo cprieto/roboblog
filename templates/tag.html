@@ -3,7 +3,7 @@
 {% block body %}
 <div class="eight columns offset-by-two">
   <header class="post">
-    <h1><a href="{{SITEURL}}/index.html">{{SITENAME}}</a></h1>
+    <h1><a rel="index" href="{{SITEURL}}/index.html">{{SITENAME}}</a></h1>
   </header>
 </div>
 <main role="main" class="archives">
@@ -18,9 +18,9 @@
           <article>
             <h4><a href="{{SITEURL}}/{{article.url}}">{{article.title}}</a></h4>
             <div class="meta">
-              <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B')}}</time>{% if article.tags|length > 1 %}; also on 
+              <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B')}}</time>{% if article.tags|length > 1 %}; also on
               {% for article_tag in article.tags|all_but(tag) %}
-              <a href="{{ SITEURL }}/{{ article_tag.url }}">{{article_tag.name}}</a>{% if not loop.last %}, {% endif %}
+              <a rel="tag" href="{{ SITEURL }}/{{ article_tag.url }}">{{article_tag.name}}</a>{% if not loop.last %}, {% endif %}
               {% endfor %}
               {% endif %}
             </div>
