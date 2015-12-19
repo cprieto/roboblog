@@ -40,7 +40,7 @@
       </section>
       <footer>
         <div class="meta">
-          <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B %Y')}}</time>
+          <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d')}} <a rel="archives" href="{{SITEURL}}/posts/{{article.date|strftime('%Y')}}/{{article.date|strftime('%m')}}/index.html">{{article.date|strftime('%B')}}</a> <a rel="archives" href="{{SITEURL}}/posts/{{article.date|strftime('%Y')}}/index.html">{{article.date|strftime('%Y')}}</a></time>
           {% if article.tags %}
            on {% for tag in article.tags %}<a rel="tag" href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
           {% endif %}

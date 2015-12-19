@@ -16,7 +16,7 @@
       <article>
         <h4><a href="{{SITEURL}}/{{article.url}}">{{article.title}}</a></h4>
         <div class="meta">
-          <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d %B')}}</time>{% if article.tags|length > 0 %}; on
+          <time pubdate datetime="{{article.date.isoformat()}}">{{article.date|strftime('%d')}} <a rel="archives" href="{{SITEURL}}/posts/{{article.date|strftime('%Y')}}/{{article.date|strftime('%m')}}/index.html">{{article.date|strftime('%B')}}</a> <a rel="archives" href="{{SITEURL}}/posts/{{article.date|strftime('%Y')}}/index.html">{{article.date|strftime('%Y')}}</a></time>{% if article.tags|length > 0 %}; on
           {% for article_tag in article.tags %}
           <a rel="tag" href="{{ SITEURL }}/{{ article_tag.url }}">{{article_tag.name}}</a>{% if not loop.last %}, {% endif %}
           {% endfor %}
