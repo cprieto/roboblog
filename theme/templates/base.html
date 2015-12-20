@@ -4,23 +4,25 @@
   <meta charset="utf-8">
   <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
   {% if period %}
-  <meta name="description" content="{{SITESUBTITLE}} archives for {{period|reverse|join(' ')}}">
+  <meta name="description" content="{{SITENAME}} archives for {{period|reverse|join(' ')}}" />
   {% elif tag %}
-  <meta name="description" content="{{SITESUBTITLE}} articles archived under tag {{tag|striptags}}">
+  <meta name="description" content="{{SITENAME}} articles archived under tag {{tag|striptags}}" />
   {% elif article %}
-  <meta name="description" content="{{SITESUBTITLE}} article about {{article.title|striptags}}">
+  <meta name="description" content="{{article.summary|striptags}}" />
   {% elif page %}
-  <meta name="description" content="{{page.title|striptags}}">
+  <meta name="description" content="{{page.title|striptags}}" />
   {% else %}
-  <meta name="description" content="{{SITESUBTITLE}}">
+  <meta name="description" content="{{SITENAME}}" />
   {% endif %}
-  <meta name="author" content="{{ AUTHOR }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="{{ AUTHOR }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="generator" content="Pelican" />
-  <meta property="og:locale" content="{{ DEFAULT_LANG }}">
+  <meta property="og:locale" content="{{ DEFAULT_LANG }}" />
   {% if article %}
-  <meta property="og:title" content="{{article.title|striptags}}">
-  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{article.title|striptags}}" />
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="{{SITEURL}}/{{article.url}}" />
+  <meta property="og:sitename" content="{{SITENAME}}" />
   {% elif page %}
   <meta property="og:title" content="{{page.title|striptags}}">
   {% elif period %}
@@ -29,8 +31,6 @@
   <meta property="og:title" content="{{SITENAME|striptags}}">
   <meta property="og:type" content="website">
   {% endif %}
-
-	<meta property="og:description" content="{{SITESUBTITLE}}">
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans|Merriweather:700,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- This should be move to one min css -->
