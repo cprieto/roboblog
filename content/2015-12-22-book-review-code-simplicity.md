@@ -3,6 +3,7 @@ title: Book review, Code Simplicity
 slug: book-review-code-simplicity
 date: 2015-12-20
 tags: book, reviews
+fb_image: code_simplicity_review.jpg
 ---
 
 

@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% block head %}
+{{super()}}
+{% if article.fb_image %}
+<meta property="og:image" content="{{SITEURL}}/images/{{article.fb_image}}">
+{% endif %}
+{% endblock %}
 {% block body %}
 <div class="eight columns offset-by-two">
   <header class="post">
