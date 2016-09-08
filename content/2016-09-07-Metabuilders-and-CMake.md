@@ -1,7 +1,8 @@
 ---
-title: Metabuilders and CMake
+title: The simplest CMake possible
 date: 2016-09-07
-tags: cmake, build, programming
+slug: the-simplest-cmake-possible
+tags: cmake, build, programming, native programming
 ---
 
 Most of us are already exposed to or familiar with build systems like [MSBuild](https://en.wikipedia.org/wiki/MSBuild) or [Make](https://www.gnu.org/software/make/) and well, we already know how difficult it is to maintain really huge basecodes or craft really big msbuild or Makefiles, and then, add targetting multiple platforms for a native developer!
