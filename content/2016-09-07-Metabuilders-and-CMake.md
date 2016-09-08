@@ -5,13 +5,13 @@ slug: the-simplest-cmake-possible
 tags: cmake, build, programming, native programming
 ---
 
-Most of us are already exposed to or familiar with build systems like [MSBuild](https://en.wikipedia.org/wiki/MSBuild) or [Make](https://www.gnu.org/software/make/) and well, we already know how difficult it is to maintain really huge basecodes or craft really big msbuild or Makefiles, and then, add targetting multiple platforms for a native developer!
+Most of us are already exposed to or familiar with build systems like [MSBuild](https://en.wikipedia.org/wiki/MSBuild) or [Make](https://www.gnu.org/software/make/) and well, we already know how difficult it is to maintain really huge codebases or craft really big MSBuild or Makefiles, and then, add targeting multiple platforms for a native developer!
 
 Enter the meta build systems.
 
 Basically what they do is to describe what we want to build and then from that it generates a native build script using [Makefile](http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/) or [Ninja](https://ninja-build.org/) or MSBuild or even a project file for your IDE!
 
-There are a few meta build systems out there, and [CMake](https://cmake.org/) is one of them. I am writing this as a reminder of how easy is to start with CMake and the awesome things you can do with it.
+There are a few meta build systems out there, and [CMake](https://cmake.org/) is one of them. I am writing this as a reminder of how easy it is to start with CMake and the awesome things you can do with it.
 
 # Hello world
 
@@ -31,11 +31,11 @@ Well, the simplest `CMakeLists.txt` file for this would be something like this:
 add_executable (hello hello.c)
 ```
 
-Now, let's tell CMake to do the magic for us by running this in the command line:
+Now, let's tell CMake to do the magic for us by running this on the command line:
 
     cmake .
 
-If you are running in macOS or Linux, with Make installed you will find... a `Makefile`! (or if you are running in Windows with Visual Studio installed you will find a Visual studio solution named `Project.sln` or something like that). Let's assume you are using Make, so to compile just run:
+If you are running in macOS or Linux with Make installed you will find... a `Makefile`! (or if you are running on Windows with Visual Studio installed you will find a Visual Studio solution named `Project.sln` or something like that). Let's assume you are using Make, so to compile just run:
 
     make
 
@@ -43,20 +43,20 @@ Done. You will be able to run our hello world application!
 
 # Extending the sample
 
-Well, if you check the output from `CMake` you will find a weird warning about the required version. This is because with every version of CMake they introduce new commands and things like that, so it is a good idea to tell to whoever is building the script what is the minimum required version of CMake to build this app, it is a simple command and it costs nothing. In my case my current version of CMake is 3.6.1, let's say the minimum required is 3.6:
+Well, if you check the output from `CMake` you will find a weird warning about the required version. This is because with every version of CMake they introduce new commands and things like that, so it is a good idea to tell to whoever is building the script what is the minimum required version of CMake to build this app; it is a simple command and it costs nothing. In my case my the current version of CMake is 3.6.1, so let's say the minimum required is 3.6:
 
 ```cmake
 cmake_minimum_required (VERSION 3.6)
 add_executable (hello hello.c)
 ```
-As I mentioned before, if you do this in Windows you will get a `Project.sln` file, that is not good, we want to give to our project an awesome name. Let's do that:
+As I mentioned before, if you do this in Windows you will get a `Project.sln` file; that is not good, we want to give to our project an awesome name. Let's do that:
 
 ```cmake
 cmake_minimum_required (VERSION 3.6)
 project (HelloCMake)
 add_executable (hello hello.c)
 ```
-And that is the simplest zero warning CMake file we can do!
+And that is the simplest zero-warning CMake file we can do!
 
 # Libraries
 
@@ -76,7 +76,7 @@ void sayHello() {
 }
 ```
 
-Now it is just matter to tell to our CMake that we want to _build a library as well_:
+Now it is just a matter of telling CMake that we want to _build a library as well_:
 
 ```
 cmake_minimum_required (VERSION 3.6)
@@ -105,7 +105,7 @@ int main() {
 }
 ```
 
-Now, if we try to compile this it will fail! well, this happens because we are building the library but _not linking to it_. Let's fix that in the CMakeLists.txt file:
+Now, if we try to compile this it will fail! Well, this happens because we are building the library but _not linking to it_. Let's fix that in the CMakeLists.txt file:
 
 ```
 cmake_minimum_required (VERSION 3.6)
@@ -117,4 +117,4 @@ target_link_libraries (hello libgreeter)
 
 You can see the pattern here, when using CMake functions put first the destination and later the sources.
 
-Well, I think it is enough for today with simple CMake files, we will continue later with more about CMake.
+Well, I think that is enough for today with simple CMake files, we will continue later with more about CMake.
