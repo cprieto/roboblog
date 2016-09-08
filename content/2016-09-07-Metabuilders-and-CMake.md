@@ -96,7 +96,7 @@ add_library (libgreeter SHARED greet.c)
 
 Easy, now you will see your [dynamic library](https://en.wikipedia.org/wiki/Library_(computing)#Shared_libraries) there (.dynlib, .so, .dll) but sadly you are not doing anything with it. Time to change our `hello.c` file a little:
 
-```cmake
+```c
 #include "greeter.h"
 
 int main() {
