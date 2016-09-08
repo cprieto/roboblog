@@ -4,7 +4,7 @@ date: 2016-09-07
 tags: cmake, build, programming
 ---
 
-Most of us are already exposed of familiar with build systems like [MSBuild](https://en.wikipedia.org/wiki/MSBuild) or [Make](https://www.gnu.org/software/make/) and well, we already know how difficult it is to maintain really huge basecodes or crafting really big msbuild or Makefiles, and then, add targetting multiple platforms for a native developer!
+Most of us are already exposed to or familiar with build systems like [MSBuild](https://en.wikipedia.org/wiki/MSBuild) or [Make](https://www.gnu.org/software/make/) and well, we already know how difficult it is to maintain really huge basecodes or craft really big msbuild or Makefiles, and then, add targetting multiple platforms for a native developer!
 
 Enter the meta build systems.
 
@@ -14,7 +14,7 @@ There are a few meta build systems out there, and [CMake](https://cmake.org/) is
 
 # Hello world
 
-We need a simple source code for this, assuming the file name is `hello.c`:
+We need some simple source code for this, assuming the file name is `hello.c`:
 
 ```c
 #include <stdio.h>
@@ -30,11 +30,11 @@ Well, the simplest `CMakeLists.txt` file for this would be something like this:
 add_executable (hello hello.c)
 ```
 
-Now, let's tell to CMake to do the magic for us, let's run this in the command line:
+Now, let's tell CMake to do the magic for us by running this in the command line:
 
     cmake .
 
-If you are running in macOS or Linux, with Make installed, you will find... a `Makefile`! (or if you are running in Windows with Visual Studio installed you will find a Visual studio solution named `Project.sln` or something like that). Let's assume you are using Make, so to compile just run make:
+If you are running in macOS or Linux, with Make installed you will find... a `Makefile`! (or if you are running in Windows with Visual Studio installed you will find a Visual studio solution named `Project.sln` or something like that). Let's assume you are using Make, so to compile just run:
 
     make
 
@@ -67,7 +67,7 @@ void sayHello();
 
 And well, the body of the library will of course live in a `greeter.c` file:
 
-```c
+```
 #include <stdio.h>
 
 void sayHello() {
@@ -77,17 +77,17 @@ void sayHello() {
 
 Now it is just matter to tell to our CMake that we want to _build a library as well_:
 
-```cmake
+```
 cmake_minimum_required (VERSION 3.6)
 project (HelloCMake)
 add_executable (hello hello.c)
 add_library (libgreeter greet.c)
 ```
 
-Run CMake again and done, you have your library... But wait, if you check the output you will see a [static library](https://en.wikipedia.org/wiki/Static_library), not a dynamic library!. This is because CMake, by default when building libraries will create a static library. Time to change that:
+Run CMake again and done, you have your library... But wait, if you check the output you will see a static library, not a dynamic library! This is because CMake will create a static library by default when building libraries. Time to change that:
 
 
-```cmake
+```
 cmake_minimum_required (VERSION 3.6)
 project (HelloCMake)
 add_executable (hello hello.c)
@@ -96,7 +96,7 @@ add_library (libgreeter SHARED greet.c)
 
 Easy, now you will see your [dynamic library](https://en.wikipedia.org/wiki/Library_(computing)#Shared_libraries) there (.dynlib, .so, .dll) but sadly you are not doing anything with it. Time to change our `hello.c` file a little:
 
-```c
+```
 #include "greeter.h"
 
 int main() {
@@ -106,7 +106,7 @@ int main() {
 
 Now, if we try to compile this it will fail! well, this happens because we are building the library but _not linking to it_. Let's fix that in the CMakeLists.txt file:
 
-```cmake
+```
 cmake_minimum_required (VERSION 3.6)
 project (HelloCMake)
 add_executable (hello hello.c)
@@ -114,6 +114,6 @@ add_library (libgreeter SHARED greet.c)
 target_link_libraries (hello libgreeter)
 ```
 
-You can see the pattern here, when using CMake functions put first the destination and then the sources.
+You can see the pattern here, when using CMake functions put first the destination and later the sources.
 
 Well, I think it is enough for today with simple CMake files, we will continue later with more about CMake.
