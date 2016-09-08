@@ -84,7 +84,7 @@ add_executable (hello hello.c)
 add_library (libgreeter greet.c)
 ```
 
-Run CMake again and done, you have your library... But wait, if you check the output you will see a static library, not a dynamic library!. This is because CMake, by default when building libraries will create a static library. Time to change that:
+Run CMake again and done, you have your library... But wait, if you check the output you will see a [static library](https://en.wikipedia.org/wiki/Static_library), not a dynamic library!. This is because CMake, by default when building libraries will create a static library. Time to change that:
 
 
 ```cmake
