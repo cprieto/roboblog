@@ -114,6 +114,6 @@ add_library (libgreeter SHARED greet.c)
 target_link_libraries (hello libgreeter)
 ```
 
-You can see the pattern here, when using CMake functions put first the destination and later the sources.
+You can see the pattern here, when using CMake functions put first the destination and then the sources.
 
 Well, I think it is enough for today with simple CMake files, we will continue later with more about CMake.
