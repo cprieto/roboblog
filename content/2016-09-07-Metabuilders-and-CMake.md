@@ -67,7 +67,7 @@ void sayHello();
 
 And well, the body of the library will of course live in a `greeter.c` file:
 
-```
+```c
 #include <stdio.h>
 
 void sayHello() {
@@ -77,7 +77,7 @@ void sayHello() {
 
 Now it is just matter to tell to our CMake that we want to _build a library as well_:
 
-```
+```cmake
 cmake_minimum_required (VERSION 3.6)
 project (HelloCMake)
 add_executable (hello hello.c)
@@ -87,7 +87,7 @@ add_library (libgreeter greet.c)
 Run CMake again and done, you have your library... But wait, if you check the output you will see a static library, not a dynamic library!. This is because CMake, by default when building libraries will create a static library. Time to change that:
 
 
-```
+```cmake
 cmake_minimum_required (VERSION 3.6)
 project (HelloCMake)
 add_executable (hello hello.c)
@@ -96,7 +96,7 @@ add_library (libgreeter SHARED greet.c)
 
 Easy, now you will see your [dynamic library](https://en.wikipedia.org/wiki/Library_(computing)#Shared_libraries) there (.dynlib, .so, .dll) but sadly you are not doing anything with it. Time to change our `hello.c` file a little:
 
-```
+```cmake
 #include "greeter.h"
 
 int main() {
@@ -106,7 +106,7 @@ int main() {
 
 Now, if we try to compile this it will fail! well, this happens because we are building the library but _not linking to it_. Let's fix that in the CMakeLists.txt file:
 
-```
+```cmake
 cmake_minimum_required (VERSION 3.6)
 project (HelloCMake)
 add_executable (hello hello.c)
