@@ -1,4 +1,6 @@
 newblog/
 content/cache/
 output/
+plugins/
 *.pyc
+*.iconsproj
