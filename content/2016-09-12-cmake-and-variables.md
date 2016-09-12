@@ -41,7 +41,7 @@ add_executable (hello ${SOURCES})
 
 Let's forget about our `greeter.h` file for a while. As you may expect it will compile, and you can see we can put _a list of files_ in our variables as well (in this case both files are listed as required for our executable). Variables in CMake are awesome and we will use them a lot in the future.
 
-# Setting the headers
+# Where are the header files?
 
 As I mentioned before, we forgot about the header file (which are very important in C/C++ development), let's tell to CMake that our headers are in the same directory as the source:
 
@@ -53,7 +53,7 @@ include_directories (${PROJECT_SOURCE_DIR})
 add_executable (hello ${SOURCES})
 ```
 
-This is equivalent to appending the directory to the variable `INCLUDE_DIRECTORIES` (see [the documentation](https://cmake.org/cmake/help/v3.6/command/include_directories.html)) but it looks nicer to use the command instead of setting the variable directly. By default this variable points as well to the same directory as `PROJECT_SOURCE_DIR` and that is the reason we didn't have problems before. It is good idea to set this on.
+This is kind of equivalent to appending the directory to the variable `INCLUDE_DIRECTORIES` (see [the documentation](https://cmake.org/cmake/help/v3.6/command/include_directories.html)) but it looks nicer and give us more flexibility to use the command instead of setting the variable directly. By default this variable points as well to the same directory as `PROJECT_SOURCE_DIR` and that is the reason we didn't have problems before. It is good idea to set this on.
 
 # File globbing
 
