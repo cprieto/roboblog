@@ -5,32 +5,26 @@ date: 2016-09-10
 tags: cmake, build, native, programming
 ---
 
-Yeah, it is me again, with more CMake!
+Yeah, it is me again with more CMake!
 
-You remember last blog post? when I told you that was the [simplest CMake build possible]()? well, I lied. In fact, if we just want to do the equivalent _Hello world_ in CMake something like this will be enough:
+You remember last blog post? when I told you it was the [simplest CMake build file possible](the-simplest-cmake-possible)? Well, I lied. In fact, if we just want to print _Hello world_ in CMake we just need to do something like this:
 
 ```cmake
 # we just print hello world
 message("Hello world!")
 ```
 
-That does absolutely nothing, but just say Hello world when generating the Makefile, and of course, your Makefile will do absolutely nothing.
+It does absolutely nothing, but just say Hello world when generating the Makefile, and of course, your Makefile will do absolutely nothing.
 
-# CMake and variables
+# Variables
 
-So far I had introduced to you only to CMake `Commands`, yes, `add_executable`, `link_target_library` and `message` are _commands_, they tell to CMake what to do and believe me, there are _plenty_ of commands to do a lot of things!.
+So I have been talking only about CMake **Commands**, `add_executable`, `link_target_library` and `message` are _commands_ in CMake, they tell CMake what to do and CMake will know how to do it. CMake has a lot of commands and all of them are documented in the [CMake documentation](http://cmake.org/cmake/help/v3.6/manual/cmake-commands.7.html).
 
-Well, as every modern script "language", CMake has _variables_ too, and some of those variables are _special_ and provided with CMake to provide certain information, like the directory where the sources are, the place where we put the libraries and so on. The same as commands, there are a lot of [useful variables](https://cmake.org/Wiki/CMake_Useful_Variables) the same as a [lot of commands](https://cmake.org/cmake/help/v3.6/manual/cmake-commands.7.html) to do a bunch of things, for example, a very useful variable is `PROJECT_SOURCE_DIR` which points to the current directory where CMake expects the source code:
+As every modern scripting "language", CMake has _variables_ too, and some of those variables are _special_ and provide special information from CMake, like the directory path where the sources are, the place where we put the compiled executables and libraries, etc. The same as commands, there are a lot of [useful variables](https://cmake.org/Wiki/CMake_Useful_Variables) listed in the CMake wiki and documentation.
 
-```cmake
-message(${PROJECT_SOURCE_DIR})
-```
+## Setting variables
 
-As you can see, by default the source directory is the same path where we have the `CMakeLists.txt` file.
-
-# Setting variables
-
-Set a variable in CMake is really easy, we just use the command `set`:
+Set a variable in CMake is really easy, you just need the command `set`:
 
 ```cmake
 cmake_minimum_required (VERSION 3.5)
@@ -39,21 +33,28 @@ set (SOURCES hello.c greeter.c)
 add_executable (hello ${SOURCES})
 ```
 
-Let's forget about our `greeter.h` file for a while. As you may expect it will compile, and you can see we can put _a list of files_ in our variables as well (in this case both files are listed as required for our executable). Variables in CMake are awesome and we will use them a lot in the future.
+We just created _a list of files_ in our variable `SOURCES` and then use that variable in a target. Easy!
 
 # Where are the header files?
 
-As I mentioned before, we forgot about the header file (which are very important in C/C++ development), let's tell to CMake that our headers are in the same directory as the source:
+Header files are important in C/C++ development and usually they live in a separate directory. Let's change that in our current project:
+
+```bash
+mkdir includes
+mv greeter.h includes
+```
+
+Of course we will need to change our CMakeLists.txt file to reflect this change:
 
 ```cmake
 cmake_minimum_required (VERSION 3.5)
 project (CMakeVariables)
 set (SOURCES hello.c greeter.c)
-include_directories (${PROJECT_SOURCE_DIR})
+include_directories (${PROJECT_SOURCE_DIR}/includes)
 add_executable (hello ${SOURCES})
 ```
 
-This is kind of equivalent to appending the directory to the variable `INCLUDE_DIRECTORIES` (see [the documentation](https://cmake.org/cmake/help/v3.6/command/include_directories.html)) but it looks nicer and give us more flexibility to use the command instead of setting the variable directly. By default this variable points as well to the same directory as `PROJECT_SOURCE_DIR` and that is the reason we didn't have problems before. It is good idea to set this on.
+As you can see, we need to use the `include_directories` command to tell CMake where to find our header files.
 
 # File globbing
 
