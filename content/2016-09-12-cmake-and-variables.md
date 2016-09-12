@@ -39,8 +39,10 @@ We just created _a list of files_ in our variable `SOURCES` and then used that v
 
 Header files are important in C/C++ development and usually they live in a separate directory. Let's change that in our current project:
 
-    mkdir includes
-    mv greeter.h includes
+```console
+mkdir includes
+mv greeter.h includes
+```
 
 Of course we will need to change our CMakeLists.txt file to reflect this change:
 
