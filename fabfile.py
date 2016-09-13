@@ -8,7 +8,7 @@ import publishconf
 import coloredlogs, logging
 
 from pelican.server import ComplexHTTPRequestHandler
-from git import Repo
+from git import Repo, InvalidGitRepositoryError, NoSuchPathError
 
 join = os.path.join
 normpath = os.path.normpath
@@ -30,9 +30,13 @@ def clean(generated_path=pelicanconf.OUTPUT_PATH):
     if any(normpath(x.abspath) == normpath(output_path) for x in repo.submodules):
         logging.warn("Output directory is a git submodule, resetting it.")
 
-        output_repo = Repo(output_path)
-        output_repo.head.reset(working_tree=True, hard=True)
-        output_repo.git.clean("-f")
+        try:
+            output_repo = Repo(output_path)
+            output_repo.head.reset(working_tree=True, hard=True)
+            output_repo.git.clean("-f")
+        except NoSuchPathError:
+            os.mkdir(generated_path)
+            local("git submodule update --init")
     else:
         logging.warn("Output path is not a git submodule, deleting it.")
         local("rm -rf {0}".format(pelicanconf.OUTPUT_PATH))
