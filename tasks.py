@@ -63,22 +63,10 @@ def publish(ctx):
     update_submodule(ctx)
     fetch_submodule(ctx)
 
-    #preview(ctx)
+    preview(ctx)
 
-    #output = Repo(full_path(publishconf.OUTPUT_PATH))
-
-    # if output.is_dirty():
-    #     # Adding untracked files
-    #     output.index.add(x for x in output.untracked_files)
-    #
-    #     # Adding modified files
-    #     output.index.add(x.a_path for x in output.index.diff(None) if x.change_type == 'M')
-    #
-    #     ctx.run("git --git-dir={0}/.git commit".format(output.working_tree_dir), pty=True)
-    #
-    # else:
-    #     logging.info("No changes made to the blog!")
-
+    add_changes(ctx)
+    fetch_submodule(ctx)
 
 @task
 def create_submodule(ctx):
@@ -106,3 +94,23 @@ def fetch_submodule(ctx):
         logging.warn("Updating submodule to latest version")
         repo.git.add(publishconf.OUTPUT_PATH)
         repo.index.commit(message="Updated output to latest version in remote")
+
+
+@task
+def add_changes(ctx):
+    output = Repo(full_path(publishconf.OUTPUT_PATH))
+
+    if output.is_dirty():
+        # Adding untracked files
+        output.index.add(x for x in output.untracked_files)
+
+        # Adding modified files
+        output.index.add(x.a_path for x in output.index.diff(None) if x.change_type == 'M')
+
+        ctx.run("git --git-dir={0}/.git commit".format(output.working_tree_dir), pty=True)
+
+        # Pushing output to master, publishing the blog
+        output.remote("origin").push("master")
+
+    else:
+        logging.info("No changes made to the blog!")
