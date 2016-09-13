@@ -24,6 +24,7 @@ DISQUS_SITENAME = "idisposablethoughts"
 GOOGLE_ANALYTICS = "UA-57001655-1"
 
 GITHUB_REPO = 'git@github.com:cprieto/cprieto.github.io.git'
+SUBMODULE_NAME = "output"
 
 FEED_DOMAIN = SITEURL
 
