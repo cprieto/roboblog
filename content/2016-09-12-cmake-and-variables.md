@@ -14,13 +14,13 @@ You remember my last blog post? When I told you it was the [simplest CMake build
 message("Hello world!")
 ```
 
-It does absolutely nothing except say "Hello world" when generating the Makefile, and of course, your Makefile will do absolutely nothing.
+It does absolutely nothing except say "Hello world!" when generating the Makefile, and of course, your Makefile will do absolutely nothing.
 
 # Variables
 
-So I have been talking only about CMake **Commands**. `add_executable`, `link_target_library` and `message` are _commands_ in CMake, they tell CMake what to do and CMake will know how to do it. CMake has a lot of commands and all of them are documented in the [CMake documentation](http://cmake.org/cmake/help/v3.6/manual/cmake-commands.7.html).
+So I have been talking only about CMake **Commands**. `add_executable`, `link_target_library` and `message` are _commands_ in CMake; they tell CMake what to do and CMake will know how to do it. CMake has a lot of commands and all of them are documented in the [CMake documentation](http://cmake.org/cmake/help/v3.6/manual/cmake-commands.7.html).
 
-As every modern scripting "language", CMake has _variables_ too. Some of those variables are _special_ and provide special information to CMake, like the directory path where the sources are, the place where we put the compiled executables and libraries, etc. The same as commands, there are a lot of [useful variables](https://cmake.org/Wiki/CMake_Useful_Variables) listed in the CMake wiki and documentation.
+As in every modern scripting "language", CMake has _variables_ too. Some of those variables are _special_ and provide special information to CMake, like the directory path where the sources are, the place where we put the compiled executables and libraries, etc. The same as commands, there are a lot of [useful variables](https://cmake.org/Wiki/CMake_Useful_Variables) listed in the CMake wiki and documentation.
 
 ## Setting variables
 
@@ -33,7 +33,7 @@ set (SOURCES hello.c greeter.c)
 add_executable (hello ${SOURCES})
 ```
 
-We just created _a list of files_ in our variable `SOURCES` and then used that variable in a target. Easy!
+We just created _a list of files_ in our variable called `SOURCES` and then used that variable in a target. Easy!
 
 # Where are the header files?
 
