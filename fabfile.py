@@ -1,6 +1,5 @@
 from fabric.api import *
 import os
-import shutil
 import sys
 import SocketServer
 import pelicanconf
