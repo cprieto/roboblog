@@ -160,6 +160,10 @@ main.post article section img {
   margin-right: auto;
 }
 
+main.post article li {
+  margin: 5px 0;
+}
+
 main.post article section blockquote {
   font-size: 1.3em;
   font-style: italic;
