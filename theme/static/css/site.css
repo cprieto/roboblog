@@ -27,10 +27,16 @@ div.meta {
   color: #9eabb3;
   font-size: 0.9em;
   font-family: 'Droid Sans', sans-serif;
+  margin-top: 10px;
 }
 
 .meta time {
   text-transform: uppercase;
+}
+
+.meta .readtime {
+  font-style: italic;
+  color: #3e948b;
 }
 
 .meta img.avatar {

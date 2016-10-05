@@ -28,7 +28,7 @@ DEFAULT_PAGINATION = 5
 THEME = os.path.join(os.path.dirname(os.path.realpath(__file__)), "theme")
 TYPOGRIFY = True
 
-PLUGINS = ["neighbors", 'extended_sitemap']
+PLUGINS = ["neighbors", 'extended_sitemap', 'readtime']
 
 PYGMENTS_THEME = 'tomorrow'
 
@@ -66,4 +66,3 @@ CATEGORY_SAVE_AS = ''
 
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
-

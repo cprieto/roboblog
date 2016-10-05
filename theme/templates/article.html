@@ -26,6 +26,11 @@
            on {% for tag in article.tags %}<a rel="tag" href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
           {% endif %}
         </div>
+        {% if article.readtime %}
+        <div class="meta">
+          <span class="readtime">{{article.readtime_minutes}} minutes read</span>
+        </div>
+        {% endif %}
       </header>
       <section>
         {{ article.content }}
