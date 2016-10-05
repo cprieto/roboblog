@@ -5,9 +5,9 @@ slug: cmake-out-of-source-build
 tags: native, cmake, programming
 ---
 
-Hello, it is me again! what were we talking the last time? oh yeah! CMake! Well, here I am, ready to talk more about CMake, ready?! let's go!
+Hello, it is me again! what were we talking the last time? Oh yeah! CMake! Well, here I am, ready to talk more about CMake! Ready? Let's go!
 
-So far we have been building our simple build script in the same directory than our source code. In the same directory as our `CMakeList.txt` file you will see:
+So far we have been building our simple build script in the same directory as our source code. In the same directory as our `CMakeList.txt` file you will see:
 
  * Compiled executable files (if any)
  * Compiled library files (if any)
@@ -16,11 +16,11 @@ So far we have been building our simple build script in the same directory than 
  * `cmake_install.cmake` file, it has the instructions about how to _install_ your compiled application or library
  * `CMakeFiles` directory, with a bunch of temporary files used by CMake to do a bunch of things
 
-As you may see already, there is a lot of things in the same directory as our source code, it is not actually relevant to our application, and it is mostly generated code, it could be like a great idea to put the compiled artefacts in a place, the generated files in another and the source code in another... It could be so clean!
+As you may see already, there are a lot of things in the same directory as our source code which are mostly generated code and are not actually relevant to our application. It could be like a great idea to put the compiled artefacts in a place, the generated files in another and the source code in another... It could be so clean!
 
 So far, what we have been doing is called **in-source building**, it is the default behaviour and the compiled artefacts, as well as CMake generated files, are located in the same directory. This is not the recommended way to use CMake, yes, it is the default because it is simple, but it should not be used _even in your examples_ (well, I used because I wanted to explain other things first!).
 
-The alternative is called **out-of-source building** and there is not a way to do it from the CMakeLists.txt file! in fact, the recommended way is doing this in the command prompt (or console):
+The alternative is called **out-of-source building** and there is not a way to do it from the CMakeLists.txt file! In fact, the recommended way is doing this in the command prompt (or console):
 
 ```
 mkdir build
@@ -44,7 +44,7 @@ In both cases, to build from the new build artefacts directory you just use the 
 cmake --build build --clean-first
 ```
 
-In this case, we say to CMake where is the CMakeCache file and ask it to build, I passed the option to clean the artefacts first as well.
+In this case, we tell CMake where the CMakeCache file is and ask it to build. I passed the option to clean the artefacts first as well.
 
 # Placing the artefacts
 
@@ -66,7 +66,7 @@ add_executable (hello ${HELLO_SOURCES})
 add_library (libhello SHARED ${LIBHELLO_SOURCES})
 ```
 
-As you can see, we produce a shared library and an executable, both of them are placed in the `output` directory, we do this just changing the content of the variables  `EXECUTABLE_OUTPUT_PATH` and `LIBRARY_OUTPUT_PATH`.
+As you can see, we produce a shared library and an executable, both of them are placed in the `output` directory, we do this just changing the content of the variables `EXECUTABLE_OUTPUT_PATH` and `LIBRARY_OUTPUT_PATH`.
 
 If we run our CMake build again, we will have now an output directory with both files, the executable and DLL (or SO or dSYM)... Easy!
 
