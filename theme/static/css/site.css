@@ -39,6 +39,10 @@ div.meta {
   color: #3e948b;
 }
 
+.meta .readtime::before {
+  content: "• ";
+}
+
 .meta img.avatar {
   width: 25px;
   height: 25px;
