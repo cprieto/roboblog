@@ -45,7 +45,7 @@
            on {% for tag in article.tags %}<a rel="tag" href="{{ tag.url }}">{{tag.name|striptags}}</a>{% if not loop.last %}, {% endif %}{% endfor %}
           {% endif %}
           {% if article.readtime %}
-          <span class="readtime">{{article.readtime_minutes}} minutes reading</span>
+          <span class="readtime">{{article.readtime_minutes}} minute{% if article.readtime_minutes > 1 %}s{% endif %} reading</span>
           {% endif %}
         </div>
       </footer>
