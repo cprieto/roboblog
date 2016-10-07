@@ -28,7 +28,6 @@ pyasn1==0.1.9
 pycparser==2.14
 pycrypto==2.6.1
 Pygments==2.1.3
--e git+https://github.com/cprieto/pygments-style-tomorrow.git@1952bcd8bfd99efaf45b1ebe86cf28e27fdb1255#egg=pygments_style_tomorrow
 python-dateutil==2.5.3
 pytz==2016.6.1
 requests==2.11.1
