@@ -24,7 +24,7 @@ build_script:
     - pelican -s publishconf.py
 on_success:
     - git -C output add -A
-    - git -C output commit -m "%APPVEYOR_REPO_COMMIT_MESSAGE%"
+    - git -C output --diff-index --quiet HEAD || git -C output commit -m "%APPVEYOR_REPO_COMMIT_MESSAGE%"
     - git -C output https://%GITHUB_TOKEN%@github.com/%GITHUB_USER%/%GITHUB_REPO%.git 
 artifacts:
     - path: output
