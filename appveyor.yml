@@ -1,0 +1,2 @@
+build:
+    - ps: Write-Host Hello
