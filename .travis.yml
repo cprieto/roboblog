@@ -1,19 +1,15 @@
 language: python
 python:
-  - "2.7"
-install: "pip install -q -r requirements.txt"
-before_script:
-    - "mkdir output; cd output"
-    - "git init"
-    - "git pull https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git"
-    - "cd .."
+    - "2.7"
+before_install:
     - "git config --global user.email $GITHUB_EMAIL"
     - "git config --global user.name 'Travis Deploy'"
+install: "pip install -q -r requirements.txt"
+before_script:
+    - "git init output"
+    - "git -C output pull https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git"
 script: "pelican -s publishconf.py"
 after_success:
     - "cd output; git add -A"
-    - "git status"
     - 'git commit -m "$TRAVIS_COMMIT_MESSAGE"'
-    - "git log -2"
-deploy:
-    - "pwd"
+    - "git push https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git"
