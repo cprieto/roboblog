@@ -18,7 +18,7 @@ install:
 before_build:
     - git init output
     - git -C output pull https://$(GITHUB_TOKEN)@github.com/$(GITHUB_USERNAME)/$(GITHUB_REPO).git
-build:
+build_script:
     - pelican -s publishconf.py
 artifacts:
     - path: output
