@@ -14,7 +14,7 @@ init:
     - git config --global user.email $(GITHUB_EMAIL)
     - git config --global user.name 'Travis Deploy'
 install:
-    - pip install -q -r requirements
+    - pip install -q -r requirements.txt
 before_build:
     - git init output
     - git -C output pull https://$(GITHUB_TOKEN)@github.com/$(GITHUB_USERNAME)/$(GITHUB_REPO).git
