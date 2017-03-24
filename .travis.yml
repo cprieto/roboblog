@@ -1,6 +1,7 @@
 language: python
 python:
     - "2.7"
+cache: pip
 before_install:
     - "git config --global user.email $GITHUB_EMAIL"
     - "git config --global user.name 'Travis Deploy'"

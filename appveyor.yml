@@ -3,6 +3,8 @@ branches:
         - master
 skip_tags: true
 max_jobs: 1
+cache:
+    - '%LOCALAPPDATA%\pip\Cache'
 environment:
     GITHUB_TOKEN:
         secure: EGTXnwQ9mmxtdvXYwz3eVjHEww+mUL0Zusw1eE8TEQlbZacBGgdBRksDIpPART07
@@ -22,7 +24,7 @@ build_script:
     - pelican -s publishconf.py
 on_success:
     - git -C output add -A
-    - git -C output commit -m '%APPVEYOR_REPO_COMMIT_MESSAGE%'
+    - git -C output commit -m "%APPVEYOR_REPO_COMMIT_MESSAGE%"
     - git -C output https://%GITHUB_TOKEN%@github.com/%GITHUB_USER%/%GITHUB_REPO%.git 
 artifacts:
     - path: output
