@@ -7,7 +7,7 @@ tags: cmake, build, native, programming
 
 Yeah, it is me again with more CMake!
 
-You remember my last blog post? When I told you it was the [simplest CMake build file possible](the-simplest-cmake-possible)? Well, I lied. In fact, if we just want to print _Hello world_ in CMake we just need to do something like this:
+You remember my last blog post? When I told you it was the [simplest CMake file possible]({filename}/2016-09-the-simplest-cmake-possible.md)? Well, I lied. In fact, if we just want to print _Hello world_ in CMake we just need to do something like this:
 
 ```cmake
 # we just print hello world

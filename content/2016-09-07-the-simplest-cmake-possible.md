@@ -2,7 +2,7 @@
 title: The simplest CMake possible
 date: 2016-09-07
 slug: the-simplest-cmake-possible
-tags: cmake, build, programming, native 
+tags: cmake, build, programming, native
 ---
 
 Most of us are already exposed to or familiar with build systems like [MSBuild](https://en.wikipedia.org/wiki/MSBuild) or [Make](https://www.gnu.org/software/make/) and well, we already know how difficult it is to maintain really huge codebases or craft really big MSBuild or Makefiles, and then, add targeting multiple platforms for a native developer!
