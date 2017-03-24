@@ -152,4 +152,4 @@ Now try to build the whole project again... You will see the executable `hello_a
 
 What if the library is not made in CMake? what if the library is a third party library already in the system? what if not?... Well, I will try those ideas later in another blog post(s), wish me luck!
 
-As usual, you can find the source code for this in a [GitHub Gist](https://gist.github.com/cprieto/79f3c5c7907dcc64dfca949e06b3c970)
+As usual, you can find the source code for this in a [GitHub Gist](https://gist.github.com/cprieto/79f3c5c7907dcc64dfca949e06b3c970).
