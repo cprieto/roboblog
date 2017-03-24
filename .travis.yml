@@ -4,3 +4,13 @@ python:
 
 install: "pip install -r requirements.txt"
 script: "pelican -s publishconf.py"
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+  local_dir: output
+  repo: cprieto.github.io
+  target_branch: master
