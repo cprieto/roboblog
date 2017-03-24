@@ -13,5 +13,5 @@ script: "pelican -s publishconf.py"
 after_success:
     - "cd output; git add -A"
     - "git status"
-    - "git commit -m '$TRAVIS_COMMIT_MESSAGE'"
+    - 'git commit -m "$TRAVIS_COMMIT_MESSAGE"'
     - "git log -2"
