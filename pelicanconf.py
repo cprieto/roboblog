@@ -28,7 +28,8 @@ DEFAULT_PAGINATION = 5
 THEME = os.path.join(os.path.dirname(os.path.realpath(__file__)), "theme")
 TYPOGRIFY = True
 
-PLUGINS = ["neighbors", 'extended_sitemap', 'readtime']
+# Readtime is giving issues
+PLUGINS = ['neighbors','readtime','extended_sitemap',]
 
 PYGMENTS_THEME = 'tomorrow'
 

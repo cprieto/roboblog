@@ -5,7 +5,9 @@ cache: pip
 before_install:
     - "git config --global user.email $GITHUB_EMAIL"
     - "git config --global user.name 'Travis Deploy'"
-install: "pip install -r requirements.txt"
+install: 
+    - "pip install -q -r requirements.txt"
+    - "pip install git+https://github.com/cprieto/pelican-readtime.git"
 before_script:
     - "git init output"
     - "git -C output pull https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$GITHUB_REPO.git"
