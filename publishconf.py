@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://cprieto.com/'
+SITEURL = 'http://cprieto.com'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'atom.xml'
@@ -22,9 +22,6 @@ DELETE_OUTPUT_DIRECTORY = False
 
 DISQUS_SITENAME = "idisposablethoughts"
 GOOGLE_ANALYTICS = "UA-57001655-1"
-
-GITHUB_REPO = 'git@github.com:cprieto/cprieto.github.io.git'
-SUBMODULE_NAME = "output"
 
 FEED_DOMAIN = SITEURL
 
