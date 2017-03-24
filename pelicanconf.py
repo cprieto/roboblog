@@ -32,7 +32,16 @@ PLUGINS = ["neighbors", 'extended_sitemap', 'readtime']
 
 PYGMENTS_THEME = 'tomorrow'
 
-MD_EXTENSIONS = ['codehilite(css_class=highlight,linenums=False)', 'extra', 'downheader']
+#MD_EXTENSIONS = ['codehilite(css_class=highlight,linenums=False)', 'extra', 'downheader']
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': False},
+        'markdown.extensions.extra': {},
+        'downheader': {'levels': 2}
+    },
+    'output_format': 'html5'
+}
 
 sys.path.append('.')
 import custom_filters
