@@ -10,5 +10,7 @@ before_script:
     - "cd .."
 script: "pelican -s publishconf.py"
 after_success:
-    - "cd output; git add ."
+    - "cd output; git add -u :/"
     - "git status"
+    - "git commit -m '$TRAVIS_COMMIT_MESSAGE'"
+    - "git log -2"
