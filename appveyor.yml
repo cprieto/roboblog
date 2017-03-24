@@ -11,13 +11,13 @@ environment:
     GITHUB_EMAIL:
         secure: 9HtcjxwfWvnX1qgYJJPJmg==
 init:
-    - git config --global user.email $(GITHUB_EMAIL)
+    - git config --global user.email %GITHUB_EMAIL%
     - git config --global user.name 'Travis Deploy'
 install:
     - pip install -q -r requirements.txt
 before_build:
     - git init output
-    - git -C output pull https://$(GITHUB_TOKEN)@github.com/$(GITHUB_USERNAME)/$(GITHUB_REPO).git
+    - git -C output pull https://%GITHUB_TOKEN%@github.com/%GITHUB_USERNAME%/%GITHUB_REPO%.git
 build_script:
     - pelican -s publishconf.py
 artifacts:
