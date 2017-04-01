@@ -37,6 +37,7 @@ MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': False},
         'markdown.extensions.extra': {},
+        'markdown.extensions.admonition': {},
         'downheader': {'levels': 2}
     },
     'output_format': 'html5'
