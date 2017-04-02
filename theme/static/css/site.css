@@ -193,6 +193,18 @@ main.post article section blockquote:before {
   vertical-align: -0.4em;
 }
 
+main.post article section div.admonition {
+  background: #002b36;
+  color: #dc322f;
+  font-family: monospace;
+  font-size: 1em;
+  padding: 10px;
+  border: 1px solid #383a2f;
+  border-radius: 5px;
+  margin-bottom: 2.5em;
+  overflow: auto;
+}
+
 footer.bottom nav li {
   display: inline;
 }
