@@ -5,3 +5,5 @@ output/
 .idea/
 *.pyc
 *.iconsproj
+.DS_Store
+*.pid
