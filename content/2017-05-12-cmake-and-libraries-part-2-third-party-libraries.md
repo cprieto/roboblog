@@ -2,7 +2,7 @@
 title: CMake and Libraries, part 2, third party libraries
 date: 2017-05-12
 slug: cmake-and-libraries-part-2-third-party-libraries
-tags: native, cmake, programming, make, makefile, c
+tags: native, cmake, programming, make, makefile, c, gtk3
 ---
 
 Last time we dealt with adding _subprojects_ to a main CMake project, this is very typical because, you know, sometimes C/C++ projects are _really big_. Another very common thing in big projects is using third party libraries, yes, libraries that you know should be previously installed in your machine and your application depends on it, this is specially important in _Unix platforms_ where we don't have a unique ecosystem for things like globalisation and user interfaces (_do you prefer GTK or Qt?_).
@@ -11,7 +11,7 @@ Let's say you are developing an application to run in the [Gnome Desktop environ
 
 For a simple example let's go to the [getting started with GTK3](https://developer.gnome.org/gtk3/stable/gtk-getting-started.html) page and put the `app.c` example in the `src` directory for our project:
 
-```
+```cpp
 #include <gtk/gtk.h>
 
 static void activate (GtkApplication* app, gpointer user_data) {
