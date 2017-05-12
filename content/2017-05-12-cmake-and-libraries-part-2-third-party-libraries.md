@@ -109,7 +109,7 @@ add_executable (app ${HELLO_GTK_SOURCE})
 target_link_libraries (app ${GTK3_LIBRARIES})
 ```
 
-One last thing, some libraries, like GTK3, needs additional flags when building, for example, `-pthread` to indicate reentrancy. This is not passed immediately to the compiler with our current configuration. To do this `PkgConfig` creates an additional variable named `CFLAGS_OTHER` and we can pass that to CMake with the macro `add_definitions`:
+One last thing, some libraries, like GTK3, needs additional flags when building, for example, `-pthread` to indicate reentrancy. This is not passed immediately to the compiler with our current configuration. To do so `PkgConfig` creates an additional variable named `CFLAGS_OTHER` and we can use that variable with the command `add_definitions`:
 
 ```cmake hl_lines="13"
 cmake_minimum_required (VERSION 3.6)
@@ -130,4 +130,4 @@ add_executable (app ${HELLO_GTK_SOURCE})
 target_link_libraries (app ${GTK3_LIBRARIES})
 ```
 
-And that is all for today, you can see more information about the `PkgConfig` package in the [documentation](https://cmake.org/cmake/help/latest/module/FindPkgConfig.html). There are _multiple_ modules included with CMake to do and find many things and popular libraries (like [Google Test](https://cmake.org/cmake/help/latest/module/FindGTest.html)), there are many third party modules as well, maybe I will explain how to use those third parties modules in the next blog post ;)
+And that is all for today, you can see more information about the `PkgConfig` package in the [documentation](https://cmake.org/cmake/help/latest/module/FindPkgConfig.html). There are _multiple_ modules included with CMake to find many popular libraries (like [Google Test](https://cmake.org/cmake/help/latest/module/FindGTest.html) and [OpenGL](https://cmake.org/cmake/help/latest/module/FindOpenGL.html)), we can use third party modules as well, maybe I will explain how to use those third parties modules in the next blog post ;)
