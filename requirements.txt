@@ -19,7 +19,7 @@ paramiko==2.2.1
 pelican==3.7.1
 pelican-extended-sitemap==1.0.4
 pelican-neighbors==1.0.0
--e git://github.com/cprieto/pelican-readtime.git@7b9935c69120874573e224b77115040edbe2cb7f#egg=pelican_readtime
+-e git://github.com/cprieto/pelican-readtime.git@master#egg=pelican_readtime
 pyasn1==0.2.3
 pycparser==2.17
 Pygments==2.2.0
