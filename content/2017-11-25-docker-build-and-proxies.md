@@ -173,7 +173,7 @@ RUN apk update && apk upgrade \
 
 Now the complete command to build the image is:
 
-```
+```console
 docker build \
   --build-args HTTP_PROXY=http://192.168.0.1:8899 \
   --build-args PIP_TRUSTED_HOST=192.168.0.1 \
@@ -183,3 +183,5 @@ docker build \
 ```
 
 Done! now I can keep a local cache with pip packages, docker images (from pull) and [Alpine Linux](https://alpinelinux.org/) packages :) [well, or get a faster connection that is]
+
+**NOTE**: Somebody will see the Dockerfile and point me out to use `ENV` instead of `ARG`, I will disagree. `ARG` are just optional arguments passed at build time, we don't need this settings at runtime. We avoid setting the variables directly because if we do that our image won't be portable.
