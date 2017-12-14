@@ -1,4 +1,6 @@
 /* Common styles */
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+
 body {
   border-top: #3e948b;
   border-top-style: solid;
@@ -289,4 +291,49 @@ main.page img.avatar {
     float: right;
     padding-left: 15px;
     padding-bottom: 10px;
+}
+
+div.notebook_output {
+  display: flex;
+  flex-wrap: nowrap;
+  /*border-bottom: 1px dotted gray; */
+  /*border-top: 1px dotted gray; */
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+div.notebook_output_code {
+  font-family: 'Fira Mono', monospace;
+  border-left: 6px solid crimson;
+  padding: 1px;
+  line-height: 1.1em;
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+  text-align: center;
+  flex-direction: column;
+  min-height: 35px;
+}
+
+div.notebook_output_code > pre {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+div.notebook_output_text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.notebook_output_text > span {
+  color: crimson;
+  font-family: 'Fira Mono', monospace;
 }
