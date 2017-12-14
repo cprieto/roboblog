@@ -29,7 +29,8 @@ THEME = os.path.join(os.path.dirname(os.path.realpath(__file__)), "theme")
 TYPOGRIFY = True
 
 # Readtime is giving issues
-PLUGINS = ['neighbors','readtime','extended_sitemap',]
+#PLUGINS = ['neighbors','readtime','extended_sitemap','render_math',]
+PLUGINS = ['neighbors','readtime','extended_sitemap','pelican_render_math',]
 
 PYGMENTS_THEME = 'tomorrow'
 
@@ -37,6 +38,7 @@ MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': False},
         'markdown.extensions.extra': {},
+        'mdx_notebook': {},
         'markdown.extensions.admonition': {},
         'downheader': {'levels': 2}
     },
