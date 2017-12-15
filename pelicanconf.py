@@ -38,7 +38,7 @@ MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': False},
         'markdown.extensions.extra': {},
-        'mdx_notebook': {},
+        'mdx_notebook': {'OUTPUT_LABEL_TEXT': 'Out[*]:'},
         'markdown.extensions.admonition': {},
         'downheader': {'levels': 2}
     },

@@ -14,14 +14,14 @@ Jinja2==2.9.6
 Markdown==2.6.9
 markdown-downheader==1.1.0
 MarkupSafe==1.0
--e git+https://github.com/cprieto/mdx_notebook.git@6d9122cbeb0491c4a0b6f73a1b56a879352e7679#egg=mdx_notebook
+-e git+https://github.com/cprieto/mdx_notebook.git@master#egg=mdx_notebook
 packaging==16.8
 paramiko==2.3.1
 pelican==3.7.1
 pelican-extended-sitemap==1.0.4
 pelican-neighbors==1.0.0
--e git://github.com/cprieto/pelican-readtime.git@7b9935c69120874573e224b77115040edbe2cb7f#egg=pelican_readtime
--e git+https://github.com/cprieto/pelican-render-math.git@af232a59f02b5f0d87bf695883c220c0e87eb7bf#egg=pelican_render_math
+-e git://github.com/cprieto/pelican-readtime.git@master#egg=pelican_readtime
+-e git+https://github.com/cprieto/pelican-render-math.git@master#egg=pelican_render_math
 pyasn1==0.3.7
 pycparser==2.18
 Pygments==2.2.0
