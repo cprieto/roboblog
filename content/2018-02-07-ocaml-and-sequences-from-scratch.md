@@ -56,7 +56,10 @@ val seq_length : 'a seq -> int = <fun>
 
 This pattern is very common in OCaml, I call it _inner accumulator loop_. There is a variation of this pattern and we will see later.
 
-Now it is time for the `head` operator, it will return only the first element of a sequence or throw an invalid argument if the sequence is empty.
+The standard library in OCaml and Caml has the function `length` in the [List module](https://caml.inria.fr/pub/docs/manual-ocaml/libref/List.html)
+
+
+Now it is time for the `head` operator, or well, it is named `hd` in the `List` module in Caml, it will return only the first element of a sequence or throw an invalid argument if the sequence is empty.
 
 ```ocaml
 let seq_head = function
