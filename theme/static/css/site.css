@@ -307,7 +307,7 @@ div.notebook_output {
 div.notebook_output_code {
   font-family: 'Fira Mono', monospace;
   color: #8e908c;
-  border-left: 6px solid crimson;
+  border-left: 6px solid #8e908c;
   line-height: 1.5em;
   padding-left: 10px;
   display: flex;
@@ -325,7 +325,7 @@ div.notebook_output_code > pre {
 }
 
 div.notebook_output_text {
-  display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
   text-align: center;
