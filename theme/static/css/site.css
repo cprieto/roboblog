@@ -341,3 +341,7 @@ div.notebook_output_text > span {
   color: crimson;
   font-family: 'Fira Mono', monospace;
 }
+
+div#layout {
+  margin-top: 2.5em;
+}
