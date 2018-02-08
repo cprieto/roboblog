@@ -196,15 +196,19 @@ main.post article section blockquote:before {
 }
 
 main.post article section div.admonition {
-  background: #002b36;
   color: #dc322f;
   font-family: monospace;
   font-size: 1em;
   padding: 10px;
-  border: 1px solid #383a2f;
+  border: 1px solid #d2d3d1;
   border-radius: 5px;
   margin-bottom: 2.5em;
+  margin-top: 2.5em;
   overflow: auto;
+}
+
+div.admonition p {
+  margin: 1em;
 }
 
 footer.bottom nav li {

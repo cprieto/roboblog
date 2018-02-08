@@ -15,7 +15,7 @@ Let's start defining a sequence, we will call it `seq`:
 ```ocaml
 type 'a seq =
   | End
-  | Next of ('a, 'a seq)
+  | Next of 'a * 'a seq
 ```
 []>
 type 'a seq = Nil | Next of 'a * 'a seq
@@ -74,7 +74,7 @@ val seq_head : 'a seq -> 'a = <fun>
 - : int = 1
 <[]>
 
-The contrapart of this operator is its brother `tail`
+The contrapart of this operator is its brother `tail`, or `tl` in the List module.
 
 ```ocaml
 let seq_tail = function
@@ -124,14 +124,14 @@ val seq_nth : int -> 'a seq -> 'a
 
 Interestinly, this function had the potential to use the _inner accumulator loop_ but if we see clearly it is not needed, remember, if we discard the value of a function when it returns in a recursive call it is basically tail recursive, and here we do nothing with the return value of the function until we need it.
 
-An easy way to check if a function call is _tail recursive_ is asking the compiler to tell us so (available since OCaml 4.04)
+An easy way to check if a function call is [_tail recursive_](http://wiki.c2.com/?TailRecursion) is asking the compiler to tell us so (available since OCaml 4.04)
 
 ```ocaml
 let seq_nth n l =
   if n < 0 then raise (Invalid_argument "nth") else
   match l with
     | End -> raise (Failure "nth")
-    | Next (x, tl) -> if n = 0 then x else [@tailcall] (nth_seq (n - 1) tl)
+    | Next (x, tl) -> if n = 0 then x else ((nth_seq [@tailcall]) (n - 1) tl)
 ```
 
 In this case, if that marked call is not tail recursive (the place where we suspect is not), the compiler will throw a warning.
