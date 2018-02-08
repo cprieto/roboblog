@@ -2,6 +2,7 @@ title: OCaml and sequences from scratch, part 2
 date: 2018-02-08
 slug: ocaml-and-sequences-from-scratch-part-2
 tags: ocaml, sequences, samples, learning, functional programming
+twitter_image: camel.jpg
 ---
 
 This is the second part of my series about simple sequences in OCaml from scratch, the first part is [here]({filename}2018-02-07-ocaml-and-sequences-from-scratch-part-1.md).

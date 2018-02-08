@@ -1,8 +1,15 @@
 {% extends "base.html" %}
+{% block title %}{{SITENAME}} - {{article.title}}{% endblock title %}
 {% block head %}
 {{super()}}
 {% if article.fb_image %}
 <meta property="og:image" content="{{SITEURL}}/images/{{article.fb_image}}">
+{% endif %}
+{% if article.twitter_image %}
+<meta name="twitter:creator" content="@cprieto">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ article.title|striptags }}">
+<meta name="twitter:image" content="{{SITEURL}}/images/{{article.twitter_image}}">
 {% endif %}
 {% endblock %}
 {% block body %}

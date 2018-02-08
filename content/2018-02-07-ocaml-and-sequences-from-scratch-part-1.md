@@ -2,6 +2,7 @@ title: OCaml and sequences from scratch, part 1
 date: 2018-02-07
 slug: ocaml-and-sequences-from-scratch-part-1
 tags: ocaml, sequences, samples, learning, functional programming
+twitter_image: camel_seq_01.jpg
 ---
 
 I really like [ML languages](https://en.wikipedia.org/wiki/Category:ML_programming_language_family) ([OCaml](https://ocaml.org/), [Elm](http://elm-lang.org/), [F#](http://fsharp.org/)). Recently I was doing the problems in [99 problems in OCaml](https://ocaml.org/learn/tutorials/99problems.html) and found my lack of understanding in some basic patterns with lists.
