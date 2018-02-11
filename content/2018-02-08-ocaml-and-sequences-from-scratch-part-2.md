@@ -83,7 +83,7 @@ We can do better than this, we can write a tail recursive function!. It is not a
 ```ocaml
 let seq_append a b =
   let rec append' acc = function
-    | End -> b
+    | End -> acc
     | Next (x, t) -> append' (Next(x, acc)) t
   in
   append' End (seq_rev a)
@@ -96,6 +96,6 @@ val seq_append : 'a seq -> 'a seq -> 'a seq
 - : int seq = Next (1, Next (2, Next (3, Next (4, End))))
 <[]
 
-Did you notice the usage of `rev` here? this is another patter I like to call _reverse inner accumulator loop_ (again, I made up that name, I am pretty sure it is known with another sexier name). That pattern is another of the things you will see _very often_ in OCaml list functions, it looks _weird_ but you will see it _everywhere_ with list functions.
+Did you notice the usage of `rev` here? this is another patter I like to call _reverse inner accumulator loop_ (again, I made up that name, I am pretty sure it is known with another sexier name). That pattern is another of the things you will see _very often_ in OCaml list functions, it looks _weird_ but you will see it _everywhere_ with list functions. In the standard [Caml list module](https://caml.inria.fr/pub/docs/manual-ocaml/libref/List.html) we have the function `rev_append` and that does exactly the same.
 
 That is all for today, as usual you can find the original Jupyter Notebook in my [GitHub repository](https://github.com/cprieto/notebooks/blob/master/ocaml/OCaml_lists.ipynb).

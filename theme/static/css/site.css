@@ -1,5 +1,6 @@
 /* Common styles */
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
 
 body {
   border-top: #3e948b;
@@ -177,22 +178,25 @@ main.post article li {
 }
 
 main.post article section blockquote {
-  font-size: 1.3em;
   font-style: italic;
   font-weight: lighter;
   margin: 1.5em 25px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
-  font-family: 'Droid Sans', serif;
+  font-family: 'Roboto Slab', serif;
 }
 
-main.post article section blockquote:before {
+article section blockquote:before {
   color: #ccc;
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
+}
+
+article section blockquote > p {
+  display: inline;
 }
 
 main.post article section div.admonition {
@@ -344,4 +348,9 @@ div.notebook_output_text > span {
 
 div#layout {
   margin-top: 2.5em;
+}
+
+article section div.highlight {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
