@@ -25,7 +25,7 @@ Using this, implementing our `seq_nth_opt` is an easy job:
 
 ```ocaml
 let rec seq_nth_opt n l =
-  if n < 0 then raise (Invalid_argument "nth") else
+  if n < 0 then None else
   match l with
     | End -> None
     | Next (x, tl) -> if n = 0 then (Some x) else seq_nth_opt (n - 1) tl
