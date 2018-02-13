@@ -106,4 +106,4 @@ val map_seq' : f:('a -> 'b) -> 'a seq -> 'b seq = <fun>
 
 See? I told you `fold` is a very powerful function ;)
 
-Next time (I hope) we will talk more about _tail recursion_ and why some functions in the Caml standard library are not tail recursive (and core offers both versions).
+Next time (I hope) we will talk more about _tail recursion_ and why some functions in the Caml standard library are not tail recursive (and core offers both versions). As usual the Jupyter notebook with more of my notes (and the origin of this series) is in [my GitHub repo](https://github.com/cprieto/notebooks/blob/master/ocaml/OCaml_lists.ipynb).
