@@ -1,7 +1,7 @@
 title: OCaml and sequences from scratch, part 1
 date: 2018-02-07
 slug: ocaml-and-sequences-from-scratch-part-1
-tags: ocaml, sequences, samples, learning, functional programming
+tags: ocaml, sequences, samples, learning, functional programming, algorithms
 twitter_image: camel_seq_01.jpg
 ---
 

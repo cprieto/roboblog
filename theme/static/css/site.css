@@ -346,8 +346,8 @@ div.notebook_output_text > span {
   font-family: 'Fira Mono', monospace;
 }
 
-div#layout {
-  margin-top: 2.5em;
+div#disqus_thread iframe {
+  margin-top: 3em;
 }
 
 article section div.highlight {
