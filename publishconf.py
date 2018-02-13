@@ -8,6 +8,7 @@ from __future__ import unicode_literals
 import os
 import sys
 sys.path.append(os.curdir)
+
 from pelicanconf import *
 
 SITEURL = 'http://cprieto.com'
@@ -20,7 +21,6 @@ DELETE_OUTPUT_DIRECTORY = False
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = "idisposablethoughts"
 GOOGLE_ANALYTICS = "UA-57001655-1"
 
 FEED_DOMAIN = SITEURL
