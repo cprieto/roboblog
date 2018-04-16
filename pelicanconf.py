@@ -9,7 +9,7 @@ SITEURL = ''
 
 PATH = 'content'
 
-TIMEZONE = 'Australia/Melbourne'
+TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = u'en'
 DEFAULT_DATE = 'fs'

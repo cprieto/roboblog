@@ -2,7 +2,7 @@ title: OCaml and sequences from scratch, part 3
 date: 2018-02-13
 slug: ocaml-and-sequences-from-scratch-part-3
 tags: ocaml, sequences, samples, learning, functional programming, algorithms
-twitter_image: camel0_seq_04.jpg
+twitter_image: camel_seq_04.jpg
 ---
 
 Now it is the turn for three favourites in the [Caml standard List module](https://caml.inria.fr/pub/docs/manual-ocaml/libref/List.html), `map`, `fold_right`, `fold_left`.
