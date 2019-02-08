@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 import os, sys
 
@@ -7,7 +6,7 @@ AUTHOR = u'Cristian Prieto'
 SITENAME = u'IDisposable Thoughts'
 SITEURL = ''
 
-PATH = 'content'
+PATH = os.path.join(os.getcwd(), 'content')
 
 TIMEZONE = 'Europe/Berlin'
 
@@ -29,18 +28,18 @@ THEME = os.path.join(os.path.dirname(os.path.realpath(__file__)), "theme")
 TYPOGRIFY = True
 
 # Readtime is giving issues
-#PLUGINS = ['neighbors','readtime','extended_sitemap','render_math',]
-PLUGINS = ['neighbors','readtime','extended_sitemap','pelican_render_math',]
+PLUGINS = ['neighbors','readtime','extended_sitemap','pelican_jsmath',]
 
 PYGMENTS_THEME = 'tomorrow'
 
 MARKDOWN = {
+    'extensions': ['fenced_code', 'mdx_headdown', 'extra', 'mdx_notebook'],
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': False},
         'markdown.extensions.extra': {},
-        'mdx_notebook': {'OUTPUT_LABEL_TEXT': 'Out[*]:'},
+        'mdx_headdown': { 'offset': 2, },
+        'mdx_notebook': {'label_text': 'Out[*]:'},
         'markdown.extensions.admonition': {},
-        'downheader': {'levels': 2}
     },
     'output_format': 'html5'
 }

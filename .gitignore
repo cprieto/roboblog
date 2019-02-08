@@ -7,3 +7,5 @@ output/
 *.iconsproj
 .DS_Store
 *.pid
+.venv/
+.vscode/

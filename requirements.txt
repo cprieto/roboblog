@@ -2,19 +2,19 @@ blinker==1.4
 docutils==0.14
 feedgenerator==1.9
 Jinja2==2.10
-Markdown==2.6.11
-markdown-downheader==1.1.0
-MarkupSafe==1.0
--e git+https://github.com/cprieto/mdx_notebook@e823b4ff54ef50bf435776ba318b3b2699d1ebc4#egg=mdx_notebook
-pelican==3.7.1
+Markdown==3.0.1
+markdown-headdown==0.1.3
+markdown-notebook==1.0
+MarkupSafe==1.1.0
+pelican==4.0.1
 pelican-extended-sitemap==1.0.5
+pelican-jsmath==0.1.0
 pelican-neighbors==1.0.0
--e git+https://github.com/cprieto/pelican-readtime@7b9935c69120874573e224b77115040edbe2cb7f#egg=pelican_readtime
--e git+https://github.com/cprieto/pelican-render-math@af232a59f02b5f0d87bf695883c220c0e87eb7bf#egg=pelican_render_math
-Pygments==2.2.0
-python-dateutil==2.7.2
-pytz==2018.4
-six==1.11.0
+pelican-readtime==0.1.2
+Pygments==2.3.1
+python-dateutil==2.8.0
+pytz==2018.9
+six==1.12.0
 smartypants==2.0.1
 typogrify==2.0.7
-Unidecode==1.0.22
+Unidecode==1.0.23
