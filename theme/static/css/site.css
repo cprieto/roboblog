@@ -1,6 +1,8 @@
 /* Common styles */
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans|Merriweather:700,300');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-Iosevka.css');
 
 body {
   border-top: #3e948b;
@@ -14,7 +16,13 @@ body {
     background-color: #f0f0f0;
     border-radius: 5px;
     padding: 10px;
+    font-family: 'Iosevka';
+    font-size: 1.2em;
     border: 1px solid #e1e1e1;
+}
+
+code {
+  font-family: 'Iosevka';
 }
 
 h1, h2, h3, h4, h5 {
@@ -47,8 +55,6 @@ div.meta {
 }
 
 .meta img.avatar {
-  width: 25px;
-  height: 25px;
   margin-right: 10px;
   border-radius: 50%;
   display: inline;
@@ -116,7 +122,6 @@ header.index img.avatar {
   max-width: 140px;
   max-height: 140px;
   border-radius: 50%;
-  vertical-align: middle;
   display: block;
 }
 
@@ -304,8 +309,6 @@ main.page img.avatar {
 div.notebook_output {
   display: flex;
   flex-wrap: nowrap;
-  /*border-bottom: 1px dotted gray; */
-  /*border-top: 1px dotted gray; */
   padding-bottom: 3px;
   padding-top: 3px;
   margin-bottom: 2.5rem;
@@ -313,7 +316,6 @@ div.notebook_output {
 }
 
 div.notebook_output_code {
-  font-family: 'Fira Mono', monospace;
   color: #8e908c;
   border-left: 6px solid #8e908c;
   line-height: 1.5em;
@@ -327,6 +329,8 @@ div.notebook_output_code {
 }
 
 div.notebook_output_code > pre {
+  font-family: 'Iosevka';
+  font-size: 1.1em;
   margin-bottom: 1em;
   margin-top: 1em;
   text-align: left;
@@ -343,7 +347,7 @@ div.notebook_output_text {
 
 div.notebook_output_text > span {
   color: crimson;
-  font-family: 'Fira Mono', monospace;
+  font-family: 'Iosevka', monospace;
 }
 
 div#disqus_thread iframe {
