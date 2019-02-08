@@ -9,3 +9,4 @@ output/
 *.pid
 .venv/
 .vscode/
+__pycache__/
