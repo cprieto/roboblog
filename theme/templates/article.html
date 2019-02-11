@@ -60,10 +60,10 @@
     <nav>
       <ul>
           {% if article.next_article %}
-          <li><a href="{{SITEURL}}/{{article.next_article.url}}" rel="prev" title="{{article.next_article.title}}">Next post</a></li>
+          <li><a href="{{SITEURL}}/{{article.next_article.url}}" rel="prev" title="{{article.next_article.title|striptags}}">Next post</a></li>
           {% endif %}
           {% if article.prev_article %}
-          <li><a href="{{SITEURL}}/{{article.prev_article.url}}" rel="next" title="{{article.prev_article.title}}">Previous post</a></li>
+          <li><a href="{{SITEURL}}/{{article.prev_article.url}}" rel="next" title="{{article.prev_article.title|striptags}}">Previous post</a></li>
           {% endif %}
       </ul>
     </nav>
