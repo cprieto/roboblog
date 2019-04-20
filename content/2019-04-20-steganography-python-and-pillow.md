@@ -3,6 +3,7 @@ title: Steganography, Python and Image manipulation with Pillow
 date: 2019-04-20
 slug: steganography-python-and-pillow
 tags: python, programming, image
+twitter_image: baboon.png
 ---
 
 Recently at Uni I got a math class about number bases, one of the things they mentioned in the class was Steganography and I was a little curious about it and found the [Steganography wiki page in Wikipedia](https://en.wikipedia.org/wiki/Steganography). Oh boy, so many things made sense to me!
