@@ -4,7 +4,7 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 @font-face {
-	font-family: 'Iosevka SS05 Web';
+	font-family: 'Iosevka SS05';
 	font-weight: 300;
 	font-style: normal;
   src: local('Iosevka SS05'),
@@ -25,13 +25,13 @@ body {
     background-color: #f0f0f0;
     border-radius: 5px;
     padding: 10px;
-    font-family: 'Iosevka';
+    font-family: 'Iosevka SS05';
     font-size: 1.1em;
     border: 1px solid #e1e1e1;
 }
 
 code {
-  font-family: 'Iosevka';
+  font-family: 'Iosevka SS05';
 }
 
 h1, h2, h3, h4, h5 {
@@ -338,7 +338,7 @@ div.notebook_output_code {
 }
 
 div.notebook_output_code > pre {
-  font-family: 'Iosevka';
+  font-family: 'Iosevka SS05';
   font-size: 1.1em;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -356,7 +356,7 @@ div.notebook_output_text {
 
 div.notebook_output_text > span {
   color: crimson;
-  font-family: 'Iosevka', monospace;
+  font-family: 'Iosevka SS05', monospace;
 }
 
 div#disqus_thread iframe {
