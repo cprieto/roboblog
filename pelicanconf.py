@@ -28,7 +28,9 @@ THEME = os.path.join(os.path.dirname(os.path.realpath(__file__)), "theme")
 TYPOGRIFY = True
 
 # Readtime is giving issues
-PLUGINS = ['neighbors','readtime','extended_sitemap','pelican_jsmath',]
+LOAD_CONTENT_CACHE = False
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['neighbors', 'readtime', 'extended_sitemap', 'pelican_jsmath', ]
 
 PYGMENTS_THEME = 'tomorrow'
 

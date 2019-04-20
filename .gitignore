@@ -1,6 +1,5 @@
 newblog/
 content/cache/
-plugins/
 output/
 .idea/
 *.pyc
