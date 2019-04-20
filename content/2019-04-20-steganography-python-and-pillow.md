@@ -6,7 +6,7 @@ tags: python, programming, image
 twitter_image: baboon.png
 ---
 
-Recently at Uni I got a math class about number bases, one of the things they mentioned in the class was Steganography and I was a little curious about it and found the [Steganography wiki page in Wikipedia](https://en.wikipedia.org/wiki/Steganography). Oh boy, so many things made sense to me!
+Recently at Uni I got a math class about number bases, one of the things they mentioned in the class was Steganography and I was a little curious about it and found the [Steganography page in Wikipedia](https://en.wikipedia.org/wiki/Steganography). Oh boy, so many things made sense to me!
 
 While steganography is not just related to images, in this blog post I will concentrate in its use with images, the idea is simple: We can put another image or file inside an existing image without affecting (too much) the original image. 
 
