@@ -17,6 +17,12 @@ CONFIG = {
     'commit_message': "'Publish site on {}'".format(datetime.date.today().isoformat()),
     # Port for `serve`
     'port': 8000,
+    # Remote github page site
+    'github_pages_repo': 'git@github.com:cprieto/cprieto.github.io.git',
+    # Remote github page branch
+    'github_pages_remote_branch': 'master',
+
+    'site_domain': 'cprieto.com'
 }
 
 @task
@@ -82,6 +88,5 @@ def publish(c):
 def gh_pages(c):
     """Publish to GitHub Pages"""
     preview(c)
-    c.run('ghp-import -b {github_pages_branch} '
-          '-m {commit_message} '
-          '{deploy_path} -p'.format(**CONFIG))
+    c.run('ghp-import {deploy_path} -b {github_pages_branch} -c {site_domain}'.format(**CONFIG))
+    c.run('git push -f {github_pages_repo} {github_pages_branch}:{github_pages_remote_branch}'.format(**CONFIG))
