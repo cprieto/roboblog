@@ -4,10 +4,13 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 @font-face {
-	font-family: 'Iosevka Web';
+	font-family: 'Iosevka SS05 Web';
 	font-weight: 300;
 	font-style: normal;
-	src: url('https://cprieto/theme/static/fonts/iosevka-light.woff2') format('woff2'), url('https://cprieto/theme/static/fonts/iosevka-light.woff') format('woff'), url('https://cprieto/theme/static/fonts/iosevka-light.ttf') format('truetype');
+  src: local('Iosevka SS05'),
+    url('/theme/fonts/iosevka-light.woff2') format('woff2'), 
+    url('/theme/fonts/iosevka-light.woff') format('woff'), 
+    url('/theme/fonts/iosevka-light.ttf') format('truetype');
 }
 
 body {
