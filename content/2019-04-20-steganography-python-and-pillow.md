@@ -102,6 +102,6 @@ secret
 ```
 ![Secret]({attach}/images/secret_steganography.png)
 
-There it is! This technique could be implemented to hide _any type of file_ inside another, for example, I remember long time ago it was common to hide [RAR files](https://en.wikipedia.org/wiki/RAR_(file_format)) inside [GIF images](https://en.wikipedia.org/wiki/GIF). Wikipedia even mention some printer manufacturers use them as a way to print and [identify printers by their serial number](https://en.wikipedia.org/wiki/Machine_Identification_Code) for many years without nobody ever notice it.
+There it is! This technique could be implemented to hide _any type of file_ inside another, for example, I remember long time ago it was common to hide [RAR files](https://en.wikipedia.org/wiki/RAR_(file_format)) inside [GIF images](https://en.wikipedia.org/wiki/GIF). Wikipedia even mention some printer manufacturers use them as a way to print and [identify printers by their serial number](https://en.wikipedia.org/wiki/Machine_Identification_Code) for many years without anybody ever notice it.
 
 Go and play with it, I really enjoyed it :)
