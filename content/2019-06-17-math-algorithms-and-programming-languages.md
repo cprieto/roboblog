@@ -3,9 +3,10 @@ title: Math, algorithms and programming languages
 date: 2019-06-17
 slug: math-algorithm-and-programming-languages
 tags: programming, math, ocaml, python, elixir
+twitter_image: euclid.jpg
 ---
 
-A few weeks ago I started reading [Number Theory for Computing](https://www.amazon.com/Number-Theory-Computing-Song-Yan/dp/3540430725) by Song Y. Yan (amazing book by the way!) and in the first chapter we learned about the [Euclidean Algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm), or how to find the Greatest Common Divisor, probably the oldest non trivial algorithm surviving to the present days (which, btw, probably wasn't "invented" by Euclid but "documented"). 
+A few weeks ago I started reading [Number Theory for Computing](https://www.amazon.com/Number-Theory-Computing-Song-Yan/dp/3540430725) by Song Y. Yan (amazing book by the way!) and in the first chapter we learned about the [Euclidean Algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm), or how to find the Greatest Common Divisor, probably the oldest non trivial algorithm surviving to the present days (which, btw, probably it wasn't "invented" by Euclid but "documented").
 
 What called my attention is the way we take the algorithm and model or move it into a programming language, a quick search got me this answer from [StackOverflow](https://stackoverflow.com/questions/11175131/code-for-greatest-common-divisor-in-python), I will copy the second answer from that question:
 
