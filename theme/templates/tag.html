@@ -12,7 +12,7 @@
       <h2>Articles tagged with {{ tag.name|striptags }}</h2>
     </header>
     <section>
-      {% for year, list in articles|sort(attribute='date')|groupby('date.year') %}
+      {% for year, list in articles|sort(attribute='date')|groupby('date.year')|sort(reverse=True) %}
         <h3>{{ year }}</h3>
         {% for article in list|sort(attribute='date') %}
           <article>

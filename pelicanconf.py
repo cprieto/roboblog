@@ -60,11 +60,15 @@ EXTRA_PATH_METADATA = {
     'extras/favicon.ico': {'path': 'favicon.ico'}
 }
 
+DIRECT_TEMPLATES = ['index', 'tag', 'archives']
+TAG_URL = '/tag/{slug}.html'
+TAGS_SAVE_AS = '/tag/{slug}.html'
+
 YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
 
 ARCHIVES_SAVE_AS = 'posts/index.html'
-TAGS_SAVE_AS = 'tag/index.html'
+TAGS_SAVE_AS = 'tags/index.html'
 
 OUTPUT_PATH = 'output/'
 DIRECT_TEMPLATES = ['index', 'archives', 'tags']
