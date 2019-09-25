@@ -2,8 +2,7 @@ title: Modulus is not Remainder
 date: 2019-09-25
 slug: modulus-is-not-remainder
 tags: programming, math
-twitter_image: gauss.jpg
-
+twitter_image: numpy_logo.png
 ---
 I know this has been explained many times in the past, but interestingly this bit me in the back a few days ago while coding, and, the same as _homogeneous coordinates_ we will find plenty of different explanations depending on whom we ask to.
 
