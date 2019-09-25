@@ -2,7 +2,7 @@ title: Modulus is not Remainder
 date: 2019-09-25
 slug: modulus-is-not-remainder
 tags: programming, math
-twitter_image: numpy_logo.png
+twitter_image: gauss.png
 ---
 I know this has been explained many times in the past, but interestingly this bit me in the back a few days ago while coding, and, the same as _homogeneous coordinates_ we will find plenty of different explanations depending on whom we ask to.
 
@@ -12,18 +12,18 @@ $$
 r = a \mod n = \lfloor a/n \rfloor n
 $$
 
-This was defined by [Gauss](https://de.wikipedia.org/wiki/Carl_Friedrich_Gau%C3%9F) in 1801, thought the Chinese and Greeks probably knew about it thousand years before. One important thing about this is that $0 \ge r \lt n$.
+This was defined by [Gauss](https://de.wikipedia.org/wiki/Carl_Friedrich_Gau%C3%9F) in 1801, thought the Chinese and Greeks probably knew about it thousand years before. One important thing about this is that $0 \le r \lt n$.
 
 This last part is important, because it defines a modulus as a positive number, for example:
 
 $$
-\begin{align}
+\begin{aligned}
 35 \mod 12 &= 11\\
 -129 \mod 7 &= 4
-\end{align}
+\end{aligned}
 $$
 
-Why the second case is 4? You could say the result is -3 (because the sign), but because we already establish that $0 \ge r \lt n$ the number cannot be negative, so we say $7-3 = 4$. We usually say _-129 is congruent with 4 mod 7_ or with the notation $-129 \equiv 4 \pmod 7$ which means both $-129$ and $4$ have the same remainders when divided by 7.
+Why the second case is 4? You could say the result is -3 (because the sign), but because we already establish that $0 \le r \lt n$ the number cannot be negative, so we say $7-3 = 4$. We usually say _-129 is congruent with 4 mod 7_ or with the notation $-129 \equiv 4 \pmod 7$ which means both $-129$ and $4$ have the same remainders when divided by 7.
 
 Notice, while we use the word _reminder_, the modulus is not the remainder, $-3$ is the remainder while $4$ is the modulus.
 
