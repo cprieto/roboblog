@@ -2,6 +2,7 @@ title: Modulus is not Remainder
 date: 2019-09-25
 slug: modulus-is-not-remainder
 tags: programming, math
+twitter_image: gauss.jpg
 
 ---
 I know this has been explained many times in the past, but interestingly this bit me in the back a few days ago while coding, and, the same as _homogeneous coordinates_ we will find plenty of different explanations depending on whom we ask to.
@@ -39,9 +40,8 @@ What? This is true for JavaScript, Go, C/C++, C# (and potentially CLR languages 
 
 The [Wikipedia page](https://en.wikipedia.org/wiki/Modulo_operation) has a good list and sort of explanation why this happens, but I can see in the same way as _homogeneous coordinates_ everybody says both are right conceptions, my math books disagree with them though.
 
-We could assume every programming language uses the `%` as the remainder instead of the modulus? oh my friend, you will get a nice surprise when using Python and R, both operators (`%%` in R) are true modulus operators, so `-129 % 7` will return 4. And yes, they are named _modulus_ as well.
+We could assume every programming language uses the `%` as the remainder instead of the modulus? oh my friend, you will get a nice surprise when using Python and R, both operators (`%%` in R) are true modulus operators, so `-129 % 7` will return 4, and yes, they are named _modulus_ as well.
 
 ## Further readings
 
-I highly recommend the Wikipedia page, at least for the list of implementations in different programming languages (notice some languages like C/C++ the sign is implementation specific, so it could be different depending on the compiler). [Rob Conery](https://rob.conery.io/2018/08/21/mod-and-remainder-are-not-the-same/) wrote a blog post some time ago about the same topic. If you want to go really down in the rabbit hole I recommend the section 1.6 _Theory of congruences_ from the book [Number Theory for Computing](https://www.amazon.com/Number-Theory-Computing-Song-Yan/dp/3540430725) by Song Y. Yang, its explanation is massive and very mathematical but it has been my guide for, well, number theory :smile:
-
+I highly recommend the Wikipedia page, at least for the list of implementations in different programming languages (notice some languages like C/C++ the sign is implementation specific, so it could be different depending on the compiler). [Rob Conery](https://rob.conery.io/2018/08/21/mod-and-remainder-are-not-the-same/) wrote a blog post some time ago about the same topic. If you want to go really down in the rabbit hole I recommend the section 1.6 _Theory of congruences_ from the book [Number Theory for Computing](https://www.amazon.com/Number-Theory-Computing-Song-Yan/dp/3540430725) by Song Y. Yang, its explanation is massive and very mathematical but it is worth reading if you find a copy of the book in the library or something like that.
