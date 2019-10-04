@@ -4,7 +4,7 @@ slug: spring-jpa-native-queries-in-resources
 tags: programming, kotlin, java, spring
 twitter_image: pear_leaf.jpg
 ---
-A few days at work we were in the middle of a refactoring of a sort of big code base, we are using Spring Boot 2.0 and Hibernate/JPA for database access. Because the database we connect to is a little complicated (don't ask why) to speed up and simplify some queries, instead of using JPQL or JPA generated methods we decided to go and write the native SQL.
+A few days at work we were in the middle of a refactoring of a sort of big code base, we are using Spring Boot 2.0 and Hibernate/JPA for database access. Because the database we connect to is a little complicated (don't ask why), to speed up and simplify some queries, instead of using JPQL or JPA generated methods we decided to go and write the native SQL.
 
 Currently, our JPA Repositories look something like this (of course this is a fictional domain):
 
