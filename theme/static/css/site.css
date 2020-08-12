@@ -24,23 +24,27 @@ body {
 .highlight pre {
     background-color: #f0f0f0;
     border-radius: 5px;
-    padding: 10px;
     font-family: 'Iosevka SS05';
     font-size: 1.1em;
-    border: 1px solid #e1e1e1;
 }
 
 code {
   font-family: 'Iosevka SS05';
+  border: none;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Droid Sans', sans-serif;
 }
 
-p {
+p, li {
   font-size: 1.2em;
   line-height: 2.0em;
+}
+
+ul {
+  margin-left: 1.2em;
+  list-style: disc inside;
 }
 
 div.meta {
