@@ -18,8 +18,8 @@ This sounds like a really good place to use a linked list, not a full linked lis
 import java.util.*
 
 class Stack<T> {
-    var top: Node? = null
-    inner class Node(val value: T, val next: Node?)
+    private var top: Node? = null
+    private inner class Node(val value: T, val next: Node?)
 
     fun push(element: T) {
         top = Node(element, top)
