@@ -60,7 +60,7 @@ fun <T: Comparable<T>> binarySearch(items: List<T>, what: T): Int {
 How good is this? well, if we count the operations executed and assigning arbitrary constants $C$ we will get something like this:
 
 $$
-T(n) = T(\frac{n}{2)} + C_k
+T(n) = T(\frac{n}{2}) + C_k
 $$
 
 Let's remember the general form of the [master theorem](<https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)>):
