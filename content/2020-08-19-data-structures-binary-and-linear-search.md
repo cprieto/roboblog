@@ -1,8 +1,8 @@
 ---
-title: Data structures, binary and linear search (and tail recursion)
+title: Data structures, binary and linear search
 date: 2020-08-19
 tags: theory, data structures, kotlin
-slug: data-structures-binary-and-linear-search-and-tail-recursion
+slug: data-structures-binary-and-linear-search
 ---
 
 Another problem that goes hand by hand with sorting is the classical searching problem (and sometimes they need each other to work) and as sorting there are a few algorithms to pick from (sadly not as many as with sorting though). In its simplest form we just go through a collection, checking if the element we are searching for is there and if found we return the index or another number to show we failed, maybe something that will look like this in Kotlin:
@@ -20,7 +20,7 @@ fun <T> linearSearch(items: Collection<T>, what: T): Int {
 In the best case the element we are looking for is the first element in the collection so its time performance would be $\Theta(1)$ in the worst case scenario (let's say the element _is not_ in the list) we will need to go through all the elements, being this a $\Theta(n)$ operation (where $n$ is the number of elements in the collection).
 
 |                                          | Comparissons |
-|------------------------------------------|--------------|
+| ---------------------------------------- | ------------ |
 | Worst case (element not found)           | $\Theta(n)$  |
 | Best case (element is the first element) | $\Theta(1)$  |
 
@@ -28,11 +28,11 @@ When the list is unsorted we cannot do much to improve the efficiency but a diff
 
 For a given _ordered_ collection:
 
- 1. Take the element in the middle
- 2. If the element is what we are searching for, we found it!
- 3. If the element is _greater_ than what we are searching for, we should search in the left of the element (between the `start` and the `middle - 1` of the collection)
- 4. If the element is _smaller_ than what we are searching for, we know the element should be in the right of the collection (between `middle + 1` and the `end` of the collection)
- 5. Rinse and repeat until we get the element or report it is not in the collection
+1.  Take the element in the middle
+2.  If the element is what we are searching for, we found it!
+3.  If the element is _greater_ than what we are searching for, we should search in the left of the element (between the `start` and the `middle - 1` of the collection)
+4.  If the element is _smaller_ than what we are searching for, we know the element should be in the right of the collection (between `middle + 1` and the `end` of the collection)
+5.  Rinse and repeat until we get the element or report it is not in the collection
 
 As you can see we divide the big collection in _halves_ with every pass and that is why is called [_binary search_](https://en.wikipedia.org/wiki/Binary_search_algorithm) (there are actually two different theories why is called like that but I prefer to say that it is because we divide the collection in two, see [this StackExchange question](https://cs.stackexchange.com/questions/42726/why-is-binary-search-called-binary-search)).
 
@@ -63,7 +63,7 @@ $$
 T(n) = T(\frac{n}{2)} + C_k
 $$
 
-Let's remember the general form of the [master theorem](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)):
+Let's remember the general form of the [master theorem](<https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)>):
 
 $$
 T(n) = aT(\frac{n}{b}) + \Theta(n^d)
@@ -77,10 +77,10 @@ $$
 
 This looks like the _second form_ of the theorem ($d = \log_b{a}$ or $0 = \log_2{1}$) so we simplify it to $\Theta(\log{n})$, voilá!
 
-| | Comparissons |
-|-|-|
-| Best case (element is the right in the middle) | $\Theta(1)$ |
-| Worst case (element is not there at all) | $\Theta(\log{n})$ |
+|                                                | Comparissons      |
+| ---------------------------------------------- | ----------------- |
+| Best case (element is the right in the middle) | $\Theta(1)$       |
+| Worst case (element is not there at all)       | $\Theta(\log{n})$ |
 
 I don't have to tell you $\log{n}$ is smaller than $n$ but if you have any doubt, go and check ;)
 
@@ -117,5 +117,4 @@ class SearchTests {
 }
 ```
 
-# Recursion
-
+I found binary search a really nice algorithm to learn things like recursion, master theorem and divide and conquer techniques, I leave you as an exercise to write the recursive version of this algorithm in Kotlin (or your preferred learning language), I am pretty sure you will have a lot of fun!
