@@ -77,10 +77,10 @@ $$
 
 This looks like the _second form_ of the theorem ($d = \log_b{a}$ or $0 = \log_2{1}$) so we simplify it to $\Theta(\log{n})$, voilá!
 
-|                                                | Comparissons      |
-| ---------------------------------------------- | ----------------- |
-| Best case (element is the right in the middle) | $\Theta(1)$       |
-| Worst case (element is not there at all)       | $\Theta(\log{n})$ |
+|                                            | Comparissons      |
+| ------------------------------------------ | ----------------- |
+| Best case (element is right in the middle) | $\Theta(1)$       |
+| Worst case (element is not there at all)   | $\Theta(\log{n})$ |
 
 I don't have to tell you $\log{n}$ is smaller than $n$ but if you have any doubt, go and check ;)
 
