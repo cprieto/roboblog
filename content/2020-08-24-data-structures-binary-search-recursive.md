@@ -9,7 +9,7 @@ Last time we took a look at the two simplest and basic search algorithms, [binar
 
 When writing a recursive algorithm we need to take care of a few cases, especifically one important case, the case when we need to _exit_ from our recursive call (called the _base case_), this is basically the hardest part of writing a recursive algorithm because we need to think _when we should not be calling ourselves anymore_.
 
-Let's take a look at the previous binary search algorithm, we know we have reached the end when we return `-1` but when does that happen? in the previous code snippet when we are **not** in the block marked by the condition `start <= end` (and well, the negation of that is `start > end`), we can mark this as our base case and because we modify those variables let's pass them as paramters to our function. At the end we will end up with something like this:
+Let's take a look at the previous binary search algorithm, we know we have reached the end when we return `-1` but when does that happen? in the previous code snippet when we are **not** in the block marked by the condition `start <= end` (and well, the negation of that is `start > end`), we can mark this as our base case and because we modify those variables let's pass them as parameters to our function. At the end we will end up with something like this:
 
 ```kotlin
 import kotlin.math.floor
