@@ -20,7 +20,7 @@ def selection_sort(items: List[T]) -> None:
       items[i], items[idx] = items[idx], items[i]
 ```
 
-Because of this, we can see this algorithm will need to do $n^2$ comparissons but up to $n$ swaps (while bubble sort was doing $n^2$ swaps and the same amount of comparissons):
+As you see, we end up doing simple linear search for the max value between all the values remaining in the list after our current index, because of this, we can see this algorithm will need to do $n^2$ comparissons but up to $n$ swaps (while bubble sort was doing $n^2$ swaps and the same amount of comparissons):
 
 |                             | Comparissons  | Swaps       |
 |-----------------------------|---------------|-------------|
