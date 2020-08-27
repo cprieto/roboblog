@@ -23,7 +23,7 @@ function insertion_sort(items[], length)
 end
 ```
 
-But in reality the idea (and implementation) is not that complex, what we do is that we take an element (let's say the $i$ element in the list) and then compare it with all the _previous_ elements in the list, if that element is _greater_ than our current element, we move it (or push) to our current position (so the element at index $i - 1$ will be at index $i$) until we found a place $x$ where the current element is not greater or lesser than previous and next (so we found the element correct place in the array). This is analogous as the way we sort a deck of cards, we take one card and then look for the correct position of that card in the deck and _insert_ the card into that position, hence the name of this algorithm.
+But in reality the idea (and implementation) is not that complex, what we take an element (let's say the $i$ element in the list) and then compare it with all the _previous_ elements in the list, if that element is _greater_ than our current element, we move it (or push) to our current position (so the element at index $i - 1$ will be at index $i$) until we found a place $x$ where the current element is not greater or lesser than previous and next (so we found the element correct place in the array). This is analogous as the way we sort a deck of cards, we take one card and then look for the correct position of that card in the deck and _insert_ the card into that position, hence the name of this algorithm.
 
 If we try this in something like Kotlin we will end up with a simple implementation like this:
 
@@ -36,11 +36,11 @@ fun <T: Comparable<T>> insertionSort(items: MutableList<T>) {
         for (i in idx - 1 downTo 0) { // We compare with all the previous elements
             if (value < items[i]) {
                 items[(i + 1)] = items[i] // If bigger, we move current element to the right
-                idx -= 1
+                idx -= 1 // And we continue checking the previous element
             }
         }
 
-        items[idx] = value // This is the right place for the list
+        items[idx] = value // This is the right place for the item in the list
     }   
 }
 ```
