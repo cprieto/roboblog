@@ -24,7 +24,7 @@ As you see this is very a recursive and very simple algorithm but there is one p
 Let's start implementing the core of the recursive function in Kotlin, we will discuss more about the partition function later, there are many options to see there!
 
 ```kotlin
-tailrec fun <T: Comparable<T>> quickSort(items: MutableList<T>, low: Int = 0, high: Int = items.size) {
+tailrec fun <T: Comparable<T>> quickSort(items: MutableList<T>, low: Int = 0, high: Int = items.size - 1) {
   if (low >= high) return
 
   val pivot = partition(items, low, high)
@@ -69,27 +69,27 @@ end
 
 As you see not many things changes and that is good, we just took care of the indices in the first partition versus the second. I know it is difficult to see the move and swaps of elements but I will highly advice to write the code in something that you feel comfortable with and place a log or print at the end of the loop displaying the current status of the list, you will then see what elements move and the values of $i$ and $j$, low tech but effective!
 
-Knowing this implementing the partition function in Kotlin is easy, let's do it as an inner function:
+Knowing this implementing the partition function in Kotlin is easy, let's do the partition function as an inner function (to reduce the space in the post):
 
 ```kotlin
-tailrec fun <T: Comparable<T>> quickSort(items: MutableList<T>, low: Int = 0, high: Int = items.size) {
+tailrec fun <T: Comparable<T>> quickSort(items: MutableList<T>, low: Int = 0, high: Int = items.size - 1) {
   fun partition(low: Int, high: Int): Int {
     val current = items[high]
-    val idx = low
+    var idx = low
 
     for (j in idx until high) {
       if (items[j] <= current)  {
-        items[j] = items[i].also { items[i] = items[j] }  // This is how you do the a,b = b, a in Kotlin
-        i++
+        items[j] = items[idx].also { items[idx] = items[j] }  // This is how you do the a,b = b, a in Kotlin
+        idx += 1
       }
     }
-    items[high] = items[i].also { items[i] = items[high] }
+    items[high] = items[idx].also { items[idx] = items[high] }
     return idx
   }
 
   if (low >= high) return
 
-  val pivot = partition(items, low, high)
+  val pivot = partition(low, high)
   quickSort(items, low, pivot - 1)
   quickSort(items, pivot + 1, high)
 }
