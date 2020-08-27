@@ -24,7 +24,7 @@ As you see, we end up doing simple linear search for the max value between all t
 
 |                             | Comparissons  | Swaps       |
 |-----------------------------|---------------|-------------|
-| Best case (already sorted ) | $\Theta(n^2)$ | $\Theta(1)$ |
-| Worst case                  | $\Theta(n^2)$ | $\Theta(n)$ |
+| Best case (already sorted ) | $\mathcal{O}(n^2)$ | $\mathcal{O}(1)$ |
+| Worst case                  | $\mathcal{O}(n^2)$ | $\mathcal{O}(n)$ |
 
 You can reuse the test case used for the bubble sort algorithm as well and the sorting is done in place (remember, lists are kind of _by-reference_ structures in Python). Try to implement it in any other language and see how it works. Have fun!

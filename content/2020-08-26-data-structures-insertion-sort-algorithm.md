@@ -51,8 +51,8 @@ If you check the flow of the algorithm, we only need $\Theta(n)$ comparissons an
 
 |                                     | Comparissons  | Swaps         |
 |-------------------------------------|---------------|---------------|
-| Best case (list is already sorted)  | $\Theta(n)$   | $\Theta(1)$   |
-| Worst case (list is super unsorted) | $\Theta(n^2)$ | $\Theta(n^2)$ |
+| Best case (list is already sorted)  | $\mathcal{O}(n)$   | $\mathcal{O}(1)$   |
+| Worst case (list is super unsorted) | $\mathcal{O}(n^2)$ | $\mathcal{O}(n^2)$ |
 
 Thanks to this, many standard library implementations have an insertion sort algorithm because this specific algorithm is fantastic when our collection is not really big and it is nearly or close to be sorted. Another reason this algorithm is still very used is that (as with bubble sort and many other algorithms) is _stable_, that means that it will preserve the existing order of adjacent elements after the sorting.
 

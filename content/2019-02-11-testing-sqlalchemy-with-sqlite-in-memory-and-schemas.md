@@ -56,7 +56,7 @@ To do so, we have to change our `setUp` method just a little to issue a few comm
 ```python
 def setUp(self):
     db.init('sqlite://')
-    db.execute("ATTACH ':memory:' DATABASE AS authentication")
+    db.execute("ATTACH DATABASE ':memory:' AS authentication")
     db.create_all()
 ```
 

@@ -69,7 +69,7 @@ As you see, _appending_ (adding an element at the end) with our simple list is a
 
 I made the previous distinction because a common question I get all the time is "when should we implement our own data structure from scratch?" and to be honest my answer, 99% of the time, would be **never**, just use the data structures including in your standard libraries but there is usually that 1% that needs you to know "oh, this actually looks like a problem where I just need to point to the first element and then that will point to the next and so on because I will always only add elements at the beginning" so in your mind you know you should implement a data structure named a linked list, see? it is not in vain learning all these banal stuff, believe me, one day it will save the day ;)
 
-As usual I leave you here with the test implementation, I just used here the [testify](https://github.com/stretchr/testify) external library because honestly, I dislike how verbose unit tests are in Go. I leave to you to implement the remove and search operations (spoiler alert, it will be a $\Theta(n)$ operation).
+As usual I leave you here with the test implementation, I just used here the [testify](https://github.com/stretchr/testify) external library because honestly, I dislike how verbose unit tests are in Go. I leave to you to implement the remove and search operations (spoiler alert, it will be a $\mathcal{O}(n)$ operation).
 
 ```go
 import (

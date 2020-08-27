@@ -25,8 +25,8 @@ It is called because it will compare each element with the element next to it, i
 
 |                                 | Comparissons  | Swaps         |
 |---------------------------------|---------------|---------------|
-| Best case (list already sorted) | $\Theta(n)$   | $\Theta(1)$   |
-| Worst case                      | $\Theta(n^2)$ | $\Theta(n^2)$ |
+| Best case (list already sorted) | $\mathcal{O}(n)$   | $\mathcal{O}(1)$   |
+| Worst case                      | $\mathcal{O}(n^2)$ | $\mathcal{O}(n^2)$ |
 
 Bubble sort is extremely inefficient because even when the list is already sorted we have to go through all the elements of the list to check they are sorted, so that means doing nnn comparissons, while in the worst case we will need to do as much as $n^2$ comparissons (and as you see in the previous code, that is the most expensive operation in our code and something that needs to happen all the time). Not in vain [Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) said:
 

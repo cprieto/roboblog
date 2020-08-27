@@ -17,12 +17,12 @@ fun <T> linearSearch(items: Collection<T>, what: T): Int {
 }
 ```
 
-In the best case the element we are looking for is the first element in the collection so its time performance would be $\Theta(1)$ in the worst case scenario (let's say the element _is not_ in the list) we will need to go through all the elements, being this a $\Theta(n)$ operation (where $n$ is the number of elements in the collection).
+In the best case the element we are looking for is the first element in the collection so its time performance would be $\mathcal{O}(1)$ in the worst case scenario (let's say the element _is not_ in the list) we will need to go through all the elements, being this a $\mathcal{O}(n)$ operation (where $n$ is the number of elements in the collection).
 
 |                                          | Comparissons |
 | ---------------------------------------- | ------------ |
-| Worst case (element not found)           | $\Theta(n)$  |
-| Best case (element is the first element) | $\Theta(1)$  |
+| Worst case (element not found)           | $\mathcal{O}(n)$  |
+| Best case (element is the first element) | $\mathcal{O}(1)$  |
 
 When the list is unsorted we cannot do much to improve the efficiency but a different situation happens _when the list is already sorted_, if that is the case we can split the collection in parts and check if the element is in any of the subparts, this is a good example of [_divide and conquer_](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm) algorithms, we split the collection in smaller pieces and that will improve the time performance of our algorithm.
 
@@ -79,8 +79,8 @@ This looks like the _second form_ of the theorem ($d = \log_b{a}$ or $0 = \log_2
 
 |                                            | Comparissons      |
 | ------------------------------------------ | ----------------- |
-| Best case (element is right in the middle) | $\Theta(1)$       |
-| Worst case (element is not there at all)   | $\Theta(\log{n})$ |
+| Best case (element is right in the middle) | $\mathcal{O}(1)$       |
+| Worst case (element is not there at all)   | $\mathcal{O}(\log{n})$ |
 
 I don't have to tell you $\log{n}$ is smaller than $n$ but if you have any doubt, go and check ;)
 
