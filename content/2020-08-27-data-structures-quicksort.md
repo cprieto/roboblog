@@ -104,4 +104,6 @@ Why all of this mess? well, quick sort is, how I say this, **quick**! and it get
 | Best case (using good pivot)            | $\mathcal{O}(n)$   | $\mathcal{O}(n \log{n})$ |
 | Worst case (a lot of repeated elements) | $\mathcal{O}(n^2)$ | $\mathcal{O}(n^2)$       |
 
-This is why is so important to _at least_ know your sorting algorithms, not a single algorithm applies to every situation. We will see more of this in the upcoming blog posts (we will continue with sorting for a while).
+This is why is so important to _at least_ know your sorting algorithms, not a single algorithm applies to every situation. We will see more of this in the upcoming blog posts (we will continue with sorting for a while). 
+
+Runnable snippet for this code: [https://pl.kotl.in/3fXRcrTqB](https://pl.kotl.in/3fXRcrTqB)
