@@ -72,7 +72,7 @@ As you see not many things changes and that is good, we just took care of the in
 Knowing this implementing the partition function in Kotlin is easy, let's do the partition function as an inner function (to reduce the space in the post):
 
 ```kotlin
-tailrec fun <T: Comparable<T>> quickSort(items: MutableList<T>, low: Int = 0, high: Int = items.size - 1) {
+fun <T: Comparable<T>> quickSort(items: MutableList<T>, low: Int = 0, high: Int = items.size - 1) {
   fun partition(low: Int, high: Int): Int {
     val current = items[high]
     var idx = low
