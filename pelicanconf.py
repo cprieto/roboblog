@@ -32,7 +32,7 @@ LOAD_CONTENT_CACHE = False
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['neighbors', 'readtime', 'extended_sitemap', 'pelican_jsmath', ]
 
-PYGMENTS_THEME = 'tomorrow'
+PYGMENTS_THEME = 'base16-google-light'
 
 MARKDOWN = {
     'extensions': ['fenced_code', 'mdx_headdown', 'extra', 'mdx_notebook'],
