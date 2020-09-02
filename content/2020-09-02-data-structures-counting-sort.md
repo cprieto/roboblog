@@ -61,6 +61,6 @@ class CountSortTests {
 }
 ```
 
-Check the code and you will see we have to go through the list just _twice_, in other words, the time performance would be something like $T(n) = 2nC_a + C_b$ that can be represented with a case of $\Theta(n)$, there is no worst or best case, we will always have to go through all the elements in the list (that is why is good to use $\Theta$ here for time performance notation).
+Check the code and you will see we have to go through the list just _twice_, in other words, the time performance would be something like $T(n) = 2nC_a + C_b$ that can be represented with a case of $\Theta(n)$, there is no worst or best case, we will always have to go through all the elements in the list (that is why is good to use $\Theta$ here for time performance notation). If you think about this algorithm you will quickly realise that it can be used to _remove repeated elements_ and generate a new shorter list with unique elements, all of this at $\Theta(n)$ speed ;) try to modify the algorithm to return a sorted list of unique elements instead of just sorting them in place.
 
 This is one of the few algorithms that you will probably have to implement by yourself, mostly because the logic regarding enumerating the elements and placing them in the correct place or order in the temporary container.
