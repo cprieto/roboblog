@@ -7,7 +7,7 @@ slug: data-structures-counting-sort
 
 Ok, today we have another sorting algorithm but "_different_" not only in idea and implementation but in usage. So far we have seen _comparison sorts_ or sorting algorithms depending on comparing elements against each other (yes, some of them even recursive and divide and conquer). One big limitation of comparison sorts is that it doesn't matter what we do to improve them, the worst case would never be better (or faster) than $\mathcal{O}(n \log{n})$. Most algorithm classes stop in comparison sorts so I was surprised when I learnt about _non comparison sorts_ or sorts that doesn't use comparisson to sort the elements. Because of that, non comparisson sorts can do _much better_ than $\mathcal{O}(n \log{n})$ but with the disvantage that they can sort just certain domain of elements.
 
-The first non comparisson sort we are going to check is the simplest of them. It is [counting sort]() and it is designed to work on a collection of _repeated discrete limited_ elements. This means collection containing repeated elements that we can enumerate, for example:"
+The first non comparisson sort we are going to check is the simplest of them. It is [counting sort](https://en.wikipedia.org/wiki/Counting_sort) and it is designed to work on a collection of _repeated discrete limited_ elements. This means collection containing repeated elements that we can enumerate, for example:"
 
  - Family of integers: [1, 5, 1, 3, 1]
  - Enums: [up, up, down, down, left, right, left, right]
