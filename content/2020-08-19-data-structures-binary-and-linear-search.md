@@ -1,5 +1,5 @@
 ---
-title: Data structures, binary and linear search
+title: Data structures, Binary and linear search
 date: 2020-08-19
 tags: theory, data structures, kotlin, algorithm
 slug: data-structures-binary-and-linear-search

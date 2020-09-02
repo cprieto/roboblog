@@ -1,5 +1,5 @@
 ---
-title: Data structures, selection sort algorithm
+title: Data structures, Selection sort algorithm
 date: 2020-08-25
 tags: theory, data structures, python, algorithm
 slug: data-structures-selection-sort-algorithm

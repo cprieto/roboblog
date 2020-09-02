@@ -1,5 +1,5 @@
 ---
-title: Data structures, quicksort
+title: Data structures, Quicksort
 date: 2020-08-27
 tags: theory, data structures, kotlin, algorithm
 slug: data-structures-quicksort

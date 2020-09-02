@@ -1,5 +1,5 @@
 ---
-title: Data structures, bubble sort algorithm
+title: Data structures, Bubble sort algorithm
 date: 2020-08-18
 tags: theory, data structures, python, algorithm
 slug: data-structures-bubble-sort-algorithm

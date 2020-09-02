@@ -1,5 +1,5 @@
 ---
-title: Data structures, insertion sort algorithm
+title: Data structures, Insertion sort algorithm
 date: 2020-08-26
 tags: theory, data structures, kotlin, algorithm
 slug: data-structures-insertion-sort-algorithm

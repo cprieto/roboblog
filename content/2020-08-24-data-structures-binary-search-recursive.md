@@ -1,5 +1,5 @@
 ---
-title: Data structures, binary search, recursive
+title: Data structures, Binary search, recursive
 date: 2020-08-24
 tags: theory, data structures, kotlin, algorithm
 slug: data-structures-binary-search-recursive
