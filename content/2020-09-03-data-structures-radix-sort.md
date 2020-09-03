@@ -95,6 +95,6 @@ Our sorter is even _tail recursive_! yay!
 
 Ok, how good is our sorter? if you examine the code, we basically have to go through every element ($n$) the amount of _digits_ ($d$) and _radix_ ($r$) times the amount of digits, so it will behave something like this: $\Theta(dn + dr)$ or $\Theta(d(n + r))$ if you prefer.
 
-This sorter is still really fast compared to any comparisson sort and it is fantastic for sorting lists, strings, in fact anything that you can think as a collection or that can be represented with a radix. For example, you could use it to sort genetic sequences where the _radix_ is 4 (because you only have 4 bases) or binary strings where your radix is 2.
+This sorter is still really fast compared to any comparisson sort and it is fantastic for sorting lists, strings, in fact anything that you can think as a collection or that can be represented with a radix. For example, you could use it to sort genetic sequences where the _radix_ is 4 (because you only have 4 bases) or binary strings where your radix is 2, with a little of work this can be used to sort decimal numbers as well!.
 
 Most of the time you will need to implement a radix sort from scratch but it worth the effort if your data can be sort super fast with this method.

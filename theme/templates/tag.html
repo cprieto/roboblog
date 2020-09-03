@@ -14,7 +14,7 @@
     <section>
       {% for year, list in articles|sort(attribute='date')|groupby('date.year')|sort(reverse=True) %}
         <h3>{{ year }}</h3>
-        {% for article in list|sort(attribute='date') %}
+        {% for article in list|sort(attribute='date', reverse=True) %}
           <article>
             <h4><a href="{{SITEURL}}/{{article.url}}">{{article.title}}</a></h4>
             <div class="meta">
