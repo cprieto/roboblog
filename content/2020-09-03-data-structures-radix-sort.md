@@ -93,6 +93,28 @@ tailrec fun radixSort(items: Array<Int>, digits: Int, current: Int = 0): Array<I
 
 Our sorter is even _tail recursive_! yay!
 
+The test for our sorter is pretty simple:
+
+```kotlin
+class RadixSortTests {
+    private val expected = listOf(108, 157, 218, 350, 457, 613)
+
+    @Test
+    fun `It sorts a list of integers`() {
+        val items = mutableListOf(613, 218, 350, 157, 108, 457)
+        radixSort(items, 3)
+        assertEquals(expected, items)
+    }
+
+    @Test
+    fun `If the list is already sorted do nothing`() {
+        val items = expected.toMutableList()
+        radixSort(items, 3)
+        assertEquals(expected, items)
+    }
+}
+```
+
 Ok, how good is our sorter? if you examine the code, we basically have to go through every element ($n$) the amount of _digits_ ($d$) and _radix_ ($r$) times the amount of digits, so it will behave something like this: $\Theta(dn + dr)$ or $\Theta(d(n + r))$ if you prefer.
 
 This sorter is still really fast compared to any comparisson sort and it is fantastic for sorting lists, strings, in fact anything that you can think as a collection or that can be represented with a radix. For example, you could use it to sort genetic sequences where the _radix_ is 4 (because you only have 4 bases) or binary strings where your radix is 2, with a little of work this can be used to sort decimal numbers as well!.
