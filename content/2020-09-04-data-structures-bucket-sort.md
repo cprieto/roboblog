@@ -3,7 +3,6 @@ title: Data structures, Bucket sort
 date: 2020-09-03
 tags: theory, data structures, kotlin, algorithm
 slug: data-structures-bucket-sort
-status: 'draft'
 ---
 
 I promise this is the last sorting algorithm (for now)! and this time we have another non comparisson sorts (or well, not exactly but I will explain later). [Bucket sort]() is pretty much as it sounds, putting things into _buckets_ of data that are in an specific order. The idea is creating categorized buckets of data and then place the elements from the original collection into those buckets using a classification function, this is where it gets super tricky, a good classification function will place the elements in an evenly manner, for example the list:
