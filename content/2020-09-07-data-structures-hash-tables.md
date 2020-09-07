@@ -39,9 +39,6 @@ Because we don't allow collisions, we simply throw an exception:
 ```kotlin
 class HashCollisionException(message: String): Exception(message)
 
-/**
- * A hash table that once is a collision it throws an exception
- */
 class CollisionHash(size: Int = 7): Hash() {
     override fun add(value: Int) {
         val key = hash(value)
