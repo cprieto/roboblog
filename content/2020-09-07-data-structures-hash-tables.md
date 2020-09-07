@@ -5,7 +5,7 @@ tags: theory, data structures, kotlin, algorithm
 slug: data-structures-hash-tables
 ---
 
-Well, time to go back to data structures. So far we had seen [queues]({filename}/2020-08-12-data-structures-simple-queue-in-python.md), [stacks]({filename}/2020-08-17-data-structures-simple-single-linked-lists.md) and [linked lists]({filename}/2020-08-14-data-structures-simple-single-linked-lists.md) and assumed you are already familiar with arrays and vectors we can move to the next _linear data structure_ in the list of basic structures that we should know, the amazing [hash tables](https://en.wikipedia.org/wiki/Hash_table).
+Well, time to go back to data structures. So far we had seen [queues]({filename}/2020-08-12-data-structures-simple-queue-in-python.md), [stacks]({filename}/2020-08-17-data-structures-the-humble-stack.md) and [linked lists]({filename}/2020-08-14-data-structures-simple-single-linked-lists.md) and assumed you are already familiar with arrays and vectors we can move to the next _linear data structure_ in the list of basic structures that we should know, the amazing [hash tables](https://en.wikipedia.org/wiki/Hash_table).
 
 At simple sight a hash table is very similar to the [bucket sorting](https://en.wikipedia.org/wiki/Hash_table) we already used, we have a linear structure divided in buckets and basically when we need to _add_ a new element we calculate its key using a formula/function based in the value we need to store. This will make the whole process a $\mathcal{O}(1)$ operation for adding and searching the value _most of the times_ and that makes them a fantastic data structure for searching data that is constantly accessed (and avoiding linear or binary search).
 

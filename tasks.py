@@ -87,7 +87,7 @@ def gh_pages(c):
     """Publish to GitHub Pages"""
     preview(c)
     print('Running ghp-import')
-    c.run('ghp-import {deploy_path} -b {github_pages_branch}'.format(**CONFIG))
+    c.run('ghp-import {deploy_path} -b {github_pages_branch} -c {site_domain}'.format(**CONFIG))
     print('Pushing to GH')
     c.run('git push -f {github_pages_repo} {github_pages_branch}:{github_pages_remote_branch}'.format(**CONFIG))
 
