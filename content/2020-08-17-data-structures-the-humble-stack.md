@@ -1,7 +1,7 @@
 ---
 title: Data structures, the humble Stack
 date: 2020-08-17
-tags: theory, data structures, kotlin
+tags: theory, data structures, kotlin, algorithm
 slug: data-structures-the-humble-stack
 twitter_image: stack-1.png
 ---

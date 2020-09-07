@@ -23,8 +23,8 @@ The first algorithm we are going to take a look is one of those things that you 
 
 It is called because it will compare each element with the element next to it, if it is in different expected order they will swap and we will continue doing this until we reach the end (or beginning) of the list and then repeat until all the elements are sorted. If we start sorting from the beginning of the array, the last elements of the array will be in their correct position with each pass (or if they are sorted from end to beginning, the first elements of the list will be in the right order).
 
-|                                 | Comparissons  | Swaps         |
-|---------------------------------|---------------|---------------|
+|                                 | Comparissons       | Swaps              |
+|---------------------------------|--------------------|--------------------|
 | Best case (list already sorted) | $\mathcal{O}(n)$   | $\mathcal{O}(1)$   |
 | Worst case                      | $\mathcal{O}(n^2)$ | $\mathcal{O}(n^2)$ |
 

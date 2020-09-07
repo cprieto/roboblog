@@ -1,7 +1,7 @@
 ---
 title: Data structures, a simple queue in Python 
 date: 2020-08-12
-tags: theory, data structures, python
+tags: theory, data structures, python, algorithm
 slug: data-structures-simple-queue-in-python
 twitter_image: queue-1.png
 ---

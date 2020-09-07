@@ -1,7 +1,7 @@
 ---
 title: Data structures, simple single linked lists using Go
 date: 2020-08-14
-tags: theory, data structures, go
+tags: theory, data structures, go, algorithm
 slug: data-structures-simple-single-linked-lists
 twitter_image: linkedlist-1.png
 ---
