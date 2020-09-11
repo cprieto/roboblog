@@ -3,7 +3,6 @@ title: Data structures, Binary trees, breadth-first traversal
 date: 2020-09-11
 tags: theory, data structures, kotlin, algorithm
 slug: data-structures-binary-trees-breadth-first-traversal
-status: draft
 ---
 
 We have not finished with trees yet! oh no! trees are one of the most versatil data structures out there in the wild. Last time we were taking a look at how to _visit_ or _traverse_ all the nodes in a tree and we saw [depth-first traversal](), but what if we want to visit _the same tree_ as last time but from top to bottom and left to right? (in this case generating the order `A, B, C, D, E, F, G, H`). Well, this type of traversal is named _breadth-first traversal_ or _level order_ traversal.
@@ -37,3 +36,5 @@ fun `lever-order traverse`() {
   assertEquals(listOf('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'), result)
 }
 ```
+
+A very useful usage of breath-first traversal is converting a tree into a linear structure, like an array, pretty much in the same way we are testing the traversal in our tests.

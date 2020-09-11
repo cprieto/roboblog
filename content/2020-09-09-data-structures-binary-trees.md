@@ -16,8 +16,7 @@ Depending on the maximum number of children per node we have different types of 
 A simple way to assemble a binary tree is with a simple structure to hold the `data` and references to its `left` and `right` children, something simple like this:
 
 ```kotlin
-// We make it comparable to make our life easier later
-class Node<T : Comparable<T>>(
+class Node<T>(
     private val data: T,
     private var left: Node<T>? = null,
     private var right: Node<T>? = null
