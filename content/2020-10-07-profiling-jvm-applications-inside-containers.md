@@ -40,7 +40,7 @@ services:
 			- "-Dcom.sun.management.authenticate=false"
 			- "-Djava.rmi.server.hostname=localhost"
 			- "-Djcom.sun.management.jmxremote.rmi.port=8849"
-			- "app.jar"
+			- app.jar
 ```
 
 Of course, feel free to add as many other parameters you need, but this is the minimum I needed to do the local profiling inside a container.
