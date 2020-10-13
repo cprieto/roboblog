@@ -112,6 +112,8 @@ bootstrap-vcpkg.bat -win64
 
 And now it will fetch the x64-windows triplet by default when installing any libraries.
 
+**UPDATE**: This actually does not work and it doesn't matter Vcpkg is compiled for x64 in Windows, by default, in Windows, the build architecture will be _always_ x86 and if you want to install a package for x64 you have to always specify the architecture triplet in the name or using the `--triplet` parameter. Another option is using the environment variable `VCPKG_DEFAULT_TRIPLET=x64-windows` in Windows to tell to Vcpkg to always use x64 instead of their default, go figure! There is [a closed issue](https://github.com/microsoft/vcpkg/issues/1254) with this problem and, of course, a lot of developers complaining why is not the default in Windows.
+
 # Is that all?
 
 Well, not really, there are many additional commands and use cases for Vcpkg, it is pretty mature and widely used and more libraries are constantly added to the repertoire. The documentation is _ok_ and while is made by Microsoft it is clearly not centered around the Microsoft world. I really wish their setup and installation use cases feel a little less "hacky" but I see a lot of improvements in the tooling.
