@@ -19,10 +19,10 @@ fun <T> linearSearch(items: Collection<T>, what: T): Int {
 
 In the best case the element we are looking for is the first element in the collection so its time performance would be $\mathcal{O}(1)$ in the worst case scenario (let's say the element _is not_ in the list) we will need to go through all the elements, being this a $\mathcal{O}(n)$ operation (where $n$ is the number of elements in the collection).
 
-|                                          | Comparissons |
-| ---------------------------------------- | ------------ |
-| Worst case (element not found)           | $\mathcal{O}(n)$  |
-| Best case (element is the first element) | $\mathcal{O}(1)$  |
+|                                          | Comparissons     |
+|------------------------------------------|------------------|
+| Worst case (element not found)           | $\mathcal{O}(n)$ |
+| Best case (element is the first element) | $\mathcal{O}(1)$ |
 
 When the list is unsorted we cannot do much to improve the efficiency but a different situation happens _when the list is already sorted_, if that is the case we can split the collection in parts and check if the element is in any of the subparts, this is a good example of [_divide and conquer_](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm) algorithms, we split the collection in smaller pieces and that will improve the time performance of our algorithm.
 

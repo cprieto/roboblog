@@ -1,6 +1,6 @@
 ---
 title: Data structures, Bucket sort
-date: 2020-09-03
+date: 2020-09-04
 tags: theory, data structures, kotlin, algorithm
 slug: data-structures-bucket-sort
 ---

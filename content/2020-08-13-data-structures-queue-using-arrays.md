@@ -1,7 +1,7 @@
 ---
 title: Data structures, a queue using arrays in C++
 date: 2020-08-13
-tags: theory, data structures, c++
+tags: theory, data structures, c++, algorithm
 slug: data-structures-queue-using-arrays
 twitter_image: queue-2.png
 ---
