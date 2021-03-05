@@ -3,6 +3,7 @@ title: CMake and Threads
 date: 2021-03-05
 slug: cmake-and-threads
 tags: c++, native, cmake, programming
+twitter_image: threads.jpg
 ---
 
 For a while a book that had been in my shelf, asking to be read, has been [C++ Concurrency in Action, Second Edition](https://www.manning.com/books/c-plus-plus-concurrency-in-action-second-edition) by Anthony Williams and published by [Manning](https://www.manning.com/). Long story short, it is an amazing book, if you are new to concurrency or want to learn more about it (it doesn't matter you are not into C++), give it a read!.
