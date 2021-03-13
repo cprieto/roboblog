@@ -1,5 +1,5 @@
 ---
-title: CMake and Threads
+title: Simpler CMake with Conan
 date: 2021-03-14
 slug: simpler-cmake-with-conan
 tags: c++, native, cmake, programming
@@ -59,3 +59,5 @@ Try running the same commands again, voila! it works! now it is time to compile 
 ```
 cmake --build . --clean-first
 ```
+
+Nice, now we have not only a simpler setup with Conan but we can use things like components as well. Another good advantage is that almost every documentation out there about using CMake with dependencies use `find_package` so basically we can reuse it, win-win!
