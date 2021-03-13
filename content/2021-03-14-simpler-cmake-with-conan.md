@@ -3,66 +3,59 @@ title: CMake and Threads
 date: 2021-03-14
 slug: simpler-cmake-with-conan
 tags: c++, native, cmake, programming
-twitter_image: threads.jpg
-status: draft
+twitter_image: dependencies.jpg
 ---
 
-I really love the mix between CMake and Conan to handle my C++ builds with dependencies and I had talked in the past about it, but what if I tell you, there is a better version to handle our dependencies and CMake with Conan? Well, strap in!
+I had already written about using [Conan and CMake]({filename}/2020-10-26-handling-external-dependencies-in-cplusplus-with-conan.md) to handle your C++ dependencies and that is a setup I had used for a while now. Recently, while working in a few things with the [Boost](https://www.boost.org/) library, I found the cracks in this setup, for example, this setup does not support handling components, something really useful when using Boost.
 
-Let's start with the previous example:
+While asking around, I realised while this is the way most documentation is written, it is not the preferred way to use dependencies with Conan and CMake, it is not that we have to change much but the generator, instead of using the `cmake` generator, we should use the `cmake_find_package` generator. This generator will create files named `FindXXX.cmake` where `XXX` is the dependency we are included.
 
-```cpp
-#include <iostream>
-#include <nlohmann/json.hpp>
-
-using json = nlohmann::json;
-
-int main() {
-        auto entry = json::parse("{ \"name\": \"cristian\" }");
-        std::cout << "His name is: " << entry["name"] << "\n";
-}
-```
-
-And well, our `conanfile.txt` is simple enough, using [nlohmann json]() as a dependencies:
+Let's use the example from the previous blog post, but instead changing the generator to use:
 
 ```ini
-[requirements]
+[requires]
 nlohmann_json/3.9.1
 
 [generators]
-cmake
+cmake_find_package
 ```
 
-And well, an even simpler `CMakeLists.txt` :
+Now, we need to remove from CMake the previous setup and use, instead, the native `find_package` facility, now created thanks to Conan:
 
 ```cmake
-cmake_minimum_required (VERSION 3.10)
+cmake_minimum_required (VERSION 3.15)
 project (sample)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
-
-add_executable (main main.cpp)
-target_link_library (main ${CONAN_LIBS})
-```
-
-There are many problems with this installation, it depends a lot of you knowing what to link and calling `conan_basic_setup`. 
-
-# Find packages
-
-Someone helped me to _improve_ my CMake with Conan, and instead of using the `cmake` generator, using another generator: `cmake_find_package` allows us to use the `find_package` command in CMake to find the dependencies directly (and this is very useful, because most of the documentation you read out there is using `find_package`), this generator will create files named `FindXXX.cmake` where `XXX` is the name of the dependency. Our file will look like this:
-
-```cmake
-cmake_minimum_required (VERSION 3.10)
-project (sample)
-
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 find_package(nlohmann_json REQUIRED)
 
 add_executable (main main.cpp)
-target_link_library (main nlohmann_json::nlohmann_json)
+target_link_libraries (main nlohmann_json::nlohmann_json)
 ```
 
-Why the `${CMAKE_BINARY_DIR}`? well, the problem is that CMake cannot find the generated `FindXXX.cmake` so we have to tell it to find it in the same file where is generated.
+Notice the usage of `nlohmann_json::nlohmann_json`  in the dependencies, this is the name and component of your dependency.
 
-# Using 
+Let's try to install and compile this:
+
+```
+mkdir build && cd build
+conan install ..
+cmake ..
+```
+
+This will faill with a message about `Findnlohmann_json.cmake` not found in `CMAKE_MODULE_PATH`. That is weird, isn't it? I mean, if we check that file is in the build directory, what is happening? Well, it is exactly that, the file is in the build directory and not where your CMake expects the file to live, we can fix this easily _appending_ the file to our module path:
+
+```cmake
+cmake_minimum_required (VERSION 3.15)
+project (sample)
+
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
+find_package(nlohmann_json REQUIRED)
+
+add_executable (main main.cpp)
+target_link_libraries (main nlohmann_json::nlohmann_json)
+```
+Try running the same commands again, voila! it works! now it is time to compile with the usual command:
+
+```
+cmake --build . --clean-first
+```
