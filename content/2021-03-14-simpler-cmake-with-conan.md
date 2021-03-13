@@ -50,13 +50,13 @@ There are many problems with this installation, it depends a lot of you knowing 
 
 # Find packages
 
-Someone helped me to _improve_ my CMake with Conan, and instead of using the `cmake` generator, using another generator: `cmake_find_package` allows us to use the `find_package` command in CMake to find the dependencies directly (and this is very useful, because most of the documentation you read out there is using `find_package`), this generator will create files named `FindXXXX.cmake` where `XXXX` is the name of the dependency. Our file will look like this:
+Someone helped me to _improve_ my CMake with Conan, and instead of using the `cmake` generator, using another generator: `cmake_find_package` allows us to use the `find_package` command in CMake to find the dependencies directly (and this is very useful, because most of the documentation you read out there is using `find_package`), this generator will create files named `FindXXX.cmake` where `XXX` is the name of the dependency. Our file will look like this:
 
 ```cmake
 cmake_minimum_required (VERSION 3.10)
 project (sample)
 
-set(CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 find_package(nlohmann_json REQUIRED)
 
 add_executable (main main.cpp)
