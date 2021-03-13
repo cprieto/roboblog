@@ -75,7 +75,7 @@ project (sample)
 find_package (nlohmann_json CONFIG REQUIRED)
 
 add_executable (main main.cpp)
-target_link_library (main PRIVATE nlohmann_json nlohmann_json::nlohmann_json)
+target_link_libraries (main PRIVATE nlohmann_json nlohmann_json::nlohmann_json)
 ```
 
 And now it is time to build, as usual, let's do an _out-of-source_ build with CMake, but this time, we need to pass the path for the special file `vcpkg.cmake` coming in the vcpkg _installation_ directory:

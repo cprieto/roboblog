@@ -36,7 +36,7 @@ I found this way to find packages _extremely slow_ so instead I go to the [Conan
 We see the package we need is named `nlohman_json` and the latest version is `3.9.1`, we now create a file `conanfile.txt` with the _requirements_ and _how are we going to build it_ (this last part is required for conan to specify a way to include the libraries):
 
 ```ini
-[requirements]
+[requires]
 nlohmann_json/3.9.1
 
 [generators]
@@ -55,7 +55,7 @@ include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
 add_executable (main main.cpp)
-target_link_library (main ${CONAN_LIBS})
+target_link_libraries (main ${CONAN_LIBS})
 ```
 
 Notice the line including a file that conan will _generate_ for us, this file contains macros and specifications for our build files then we tell this set of macros to do the required setup and do the dependency walk. Later to link our dependencies we use the variable `${CONAN_LIBS}` in the linkage step.
