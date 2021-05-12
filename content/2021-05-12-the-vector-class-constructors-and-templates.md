@@ -120,7 +120,7 @@ Let's try something risky:
 vector<2> x{1, "b"}; // This should fail
 ```
 
-Well, this fails but not where we wanted it to fail! Our new shiny constructor is doing its job but not really, it is being enabled because we are passing three parameters but it should make sure those parameters _can be_ casted to a `float`. Looking around I saw many solutions but thanks to C++17 new [`std::conjuction_v`](https://www.fluentcpp.com/2021/04/30/how-to-implement-stdconjunction-and-stddisjunction-in-c11/) we can stop worrying about using some hacks and use them directly:
+Well, this fails but not where we wanted it to fail! Our new shiny constructor is doing its job but not really, it is being enabled because we are passing two parameters but it should make sure those parameters _can be_ casted to a `float`. Looking around I saw many solutions but thanks to C++17 new [`std::conjuction_v`](https://www.fluentcpp.com/2021/04/30/how-to-implement-stdconjunction-and-stddisjunction-in-c11/) we can stop worrying about using some hacks and use it directly:
 
 ```c++
 template<typename... Args, std::enable_if_t<sizeof...(Args) == N && std::conjunction_v<std::is_convertible<Args, float>...>>* = nullptr>
