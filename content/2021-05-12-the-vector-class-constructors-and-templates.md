@@ -147,7 +147,7 @@ And there you go, our nice vector class acts as we planned! You could add a few 
 
 # You want to know more?
 
-I cannot stress enough how helpful has been the [C++ Slack channel](https://cppalliance.org/slack/) community, they really rock and they are amazing helping and answering questions like newbies like me. I heavily encourage you to reach them and participate in the channel if you are into C++ and all of that. Another amazing guide for templates has been the great book [C++ Templates, The complete guide](https://www.google.de/books/edition/C++_Templates/PM0lYAAACAAJ) by David Vandevoorde, this book has amazing content about how templates work and goes deep into implementation details, it is a must read if you are learning or already an expert in C++.
+I cannot stress enough how helpful has been the [C++ Slack channel](https://cppalliance.org/slack/) community, they really rock and they are amazing helping and answering questions to newbies like me. I heavily encourage you to reach them and participate in the channel if you are into C++ and all of that. Another amazing guide for templates has been the great book [C++ Templates, The complete guide](https://www.google.de/books/edition/C++_Templates/PM0lYAAACAAJ) by David Vandevoorde, this book has amazing content about how templates work and goes deep into implementation details, it is a must read if you are learning or already an expert in C++.
 
 Now, if you want to know the history about templates and how did we get were we are right now I cannot recommend [From Mathematics to Generic Programming](https://dl.acm.org/doi/book/10.5555/2643027) by Alexander Stepanov, such an amazing book, not only for C++ developers but for anyone who wants to know more about generics and templates in general.
 
