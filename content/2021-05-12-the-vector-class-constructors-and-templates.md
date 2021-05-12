@@ -6,7 +6,7 @@ tags: c++, native, programming
 twitter_image: templates.png
 ---
 
-While reading the fantastic book [Foundations of Game Engine Development, Volume 1: Mathematics](https://foundationsofgameenginedev.com/#fged1) by [Dr. Eric Lengyel](http://terathon.com/lengyel/) and working through his examples I found the venerable `vector3d` class, a simple class to handle 3D vectors. I decided to try something different and write a slightly different version of the 3D vector class in C++, for my surprise it was not as trivial as I initially though so I decided to write a short blog post series about my adventures in the land of modern C++.
+While reading the fantastic book [Foundations of Game Engine Development, Volume 1: Mathematics](https://foundationsofgameenginedev.com/#fged1) by [Dr. Eric Lengyel](http://terathon.com/lengyel/) and working through his examples I found the venerable `vector3d` class, a simple class to handle 3D vectors. I decided to try something different and write a slightly different version of the 3D vector class in C++, for my surprise it was not as trivial as I initially thought so I decided to write a short blog post series about my adventures in the land of modern C++.
 
 # A better constructor
 ​
@@ -71,7 +71,7 @@ explicit vector(Args... args): elems{{args...}} {
 }
 ```
 
-This does the job but at what cost? the exception and error was thrown _at running time_ and this is not really what we are trying to do. If you think about that, we already have _enough information_ to know if we are using the constructor correctly (the vector size) so we could fail _at compile time_ and not waiting to fail at running time. One simple way to achive the same at compile time is our old friend [`static_assert`](https://en.cppreference.com/w/cpp/language/static_assert), let's change the constructor a little:
+This does the job but at what cost? the exception and error was thrown _at running time_ and this is not really what we are trying to do. If you think about that, we already have _enough information_ to know if we are using the constructor correctly (the vector size) so we could fail _at compile time_ and not waiting to fail at running time. One simple way to achieve the same at compile time is our old friend [`static_assert`](https://en.cppreference.com/w/cpp/language/static_assert), let's change the constructor a little:
 
 ```c++
 template<typename... Args>
