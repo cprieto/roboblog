@@ -3,7 +3,7 @@ title: The vector class, constructors and templates
 date: 2021-05-12
 slug: the-vector-class-constructors-and-templates
 tags: c++, native, programming
-twitter_image: dependencies.jpg
+twitter_image: templates.png
 ---
 
 While reading the fantastic book [Foundations of Game Engine Development, Volume 1: Mathematics](https://foundationsofgameenginedev.com/#fged1) by [Dr. Eric Lengyel](http://terathon.com/lengyel/) and working through his examples I found the venerable `vector3d` class, a simple class to handle 3D vectors. I decided to try something different and write a slightly different version of the 3D vector class in C++, for my surprise it was not as trivial as I initially though so I decided to write a short blog post series about my adventures in the land of modern C++.
