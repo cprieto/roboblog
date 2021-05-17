@@ -8,7 +8,7 @@ twitter_image: structured-binding.png
 
 Last blog post we were talking about how to make a nicer vector class and extend it to handle an arbitrary number of components so it is easy to do things like `vector<3> v{1, 2, 3}` and saw how powerful is to use things like [traits](https://en.cppreference.com/w/cpp/header/type_traits) and [templates](https://en.cppreference.com/w/cpp/language/templates) in our C++ code to let the compiler do its job. Though everything is nice and fantastic, we face a problem with our vector class: In the past it was easy to get the `x` component because it was just a public member in our class and now we have to deal with indexes, that is not "optimal".
 
-Fortunaltely we are dealing with C++17 and there is another compiler help we can take advantage of, [structured binding](https://en.cppreference.com/w/cpp/language/structured_binding), if you are used to work in Javascript or Python you will understand what I am talking about, instead of doing things like:
+Fortunately we are dealing with C++17 and there is another compiler help we can take advantage of, [structured binding](https://en.cppreference.com/w/cpp/language/structured_binding), if you are used to work in Javascript or Python you will understand what I am talking about, instead of doing things like:
 
 ```c++
 vector<3> v{1, 2, 3};
