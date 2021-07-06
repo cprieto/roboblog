@@ -25,7 +25,7 @@ coroutine 2:
     only when there is data available
 ```
 
-Gladly I had seen this problem so many times before in Go, a problem that is easily solved using [Go channels](https://tour.golang.org/concurrency/2) but, of course, Python does not have channels... But it has a nice structure, _the [Queue]()_!
+Gladly I had seen this problem so many times before in Go, a problem that is easily solved using [Go channels](https://tour.golang.org/concurrency/2) but, of course, Python does not have channels... But it has a nice structure, _the [Queue](https://docs.python.org/3/library/asyncio-queue.html)_!
 
 ```python
 import asyncio
