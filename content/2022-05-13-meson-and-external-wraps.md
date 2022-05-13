@@ -19,10 +19,10 @@ Test(simple, test) {
 }
 ```
 
-Ok, time for the simplest build file:
+Ok, time for the simplest build file (ignore the `default_options` part, that is just to make `clang` happy in macOS):
 
 ```meson
-project('test_criterion', 'c')
+project('test_criterion', 'c', default_options: ['cpp_std=c++17'])
 criterion = dependency('criterion')
 executable('test_criterion', 'test.c', dependencies: [criterion])
 ```
