@@ -3,6 +3,7 @@ title: Meson and external wraps
 date: 2022-05-13
 slug: meson-and-external-wraps
 tags: meson, native, programming, building
+twitter_image: meson_wraps.png
 ---
 
 Ok, [last time]({filename}/2022-05-11-meson-and-dependencies.md) I mentioned how to include wraps from the wrapdb into a meson build and it was all happy! But what if the dependency we need is **not** in the wrap database?
