@@ -5,9 +5,9 @@ slug: gradle-kotlin-and-antlr
 tags: programming, building, antlr, gradle
 ---
 
-This is one of those things I always do and somehow I forget about it next day, how to properly have a [Gradle]() build definition file with [Kotlin]() and [ANTLR]()? Yes, ANTLR generates your parser and lexer skeleton and you want to write your specialized classes using them in Kotlin, all of that with a Gradle build file.
+This is one of those things I always do and somehow I forget about it next day, how to properly have a [Gradle](https://gradle.org/) build definition file with [Kotlin](https://kotlinlang.org/) and [ANTLR](https://www.antlr.org/)? Yes, ANTLR generates your parser and lexer skeleton and you want to write your specialized classes using them in Kotlin, all of that with a Gradle build file.
 
-You will assume is easy, after all, there is a [Gradle plugin for ANTLR](), but for some reason is not _that_ transparent. Let's start with a simple grammar file (taken from the amazing [The Definitive ANTLR4 Reference]() book):
+You will assume is easy, after all, there is a [Gradle plugin for ANTLR](https://docs.gradle.org/current/userguide/antlr_plugin.html), but for some reason is not _that_ transparent. Let's start with a simple grammar file (taken from the amazing [The Definitive ANTLR4 Reference](https://pragprog.com/titles/tpantlr2/the-definitive-antlr-4-reference/) book):
 
 ```antlr
 grammar ArrayInit;
@@ -22,7 +22,7 @@ Remember to save this file in the proper place, including potential `package` di
 
 Now let's write our simple consumer for our parser in Kotlin:
 
-```kt
+```kotlin
 package com.cprieto.sample
 
 import org.antlr.v4.runtime.CharStreams
