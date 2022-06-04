@@ -3,6 +3,7 @@ title: Meson and Conan
 date: 2022-05-15
 slug: meson-and-conan
 tags: meson, native, programming, building, conan
+twitter_image: meson_lego_man.png
 ---
 Ok, I had talked a lot about [Conan](https://conan.io/) in the past and how it integrates nicely with build systems like [CMake]({filename}/2021-03-14-simpler-cmake-with-conan.md). Conan has a really huge list of packages and is really simple to use but sadly, there are no straigh instructions about using Meson with Conan... Imagine that, your build in Meson but you need some dependencies that are not Meson subprojects, you just find the required package, download it using Conan and voila! life is nice again.
 
